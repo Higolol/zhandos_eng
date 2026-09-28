@@ -541,7 +541,7 @@
       "type": "translate_ru_en",
       "ru": "Если он выйдет на пенсию, то он сойдёт с ума.",
       "en": [
-        "If he retires he will go crazy."
+        "If he retires, he will go crazy."
       ],
       "formula": [
         {
@@ -591,7 +591,7 @@
       "type": "translate_ru_en",
       "ru": "Если они уволят его, то он не сойдёт с ума.",
       "en": [
-        "If they fire him he will not go crazy."
+        "If they fire him, he will not go crazy."
       ],
       "formula": [
         {
@@ -646,7 +646,7 @@
       "type": "translate_ru_en",
       "ru": "Если она не выйдет на пенсию, то она сойдёт с ума.",
       "en": [
-        "If she does not retire she will go crazy."
+        "If she does not retire, she will go crazy."
       ],
       "formula": [
         {
@@ -696,7 +696,7 @@
       "type": "translate_ru_en",
       "ru": "Если он её не уволит, то она сойдёт с ума.",
       "en": [
-        "If he does not fire her she will go crazy."
+        "If he does not fire her, she will go crazy."
       ],
       "formula": [
         {
@@ -796,7 +796,7 @@
       "type": "translate_ru_en",
       "ru": "Если она сойдёт с ума, то мы уволим её.",
       "en": [
-        "If she goes crazy we will fire her."
+        "If she goes crazy, we will fire her."
       ],
       "formula": [
         {
@@ -892,7 +892,7 @@
       "type": "translate_ru_en",
       "ru": "Если она его уволит, он сойдёт с ума?",
       "en": [
-        "If she fires him will he go crazy?"
+        "If she fires him, will he go crazy?"
       ],
       "formula": [
         {
@@ -1189,7 +1189,7 @@
       "type": "translate_ru_en",
       "ru": "Если он выйдет на пенсию, он сойдёт с ума?",
       "en": [
-        "If he retires will he go crazy?"
+        "If he retires, will he go crazy?"
       ],
       "formula": [
         {
@@ -1236,8 +1236,8 @@
       "type": "translate_ru_en",
       "ru": "Если его не уволят, то он выйдет на пенсию.",
       "en": [
-        "If they do not fire him he will retire.",
-        "If he is not fired he will retire."
+        "If they do not fire him, he will retire.",
+        "If he is not fired, he will retire."
       ],
       "formula": [
         {
@@ -1279,7 +1279,7 @@
       "type": "translate_ru_en",
       "ru": "Когда она сойдёт с ума, он выйдет на пенсию?",
       "en": [
-        "When she goes crazy will he retire?"
+        "When she goes crazy, will he retire?"
       ],
       "formula": [
         {
@@ -1321,7 +1321,7 @@
       "type": "translate_ru_en",
       "ru": "Когда она сойдёт с ума, он её уволит?",
       "en": [
-        "When she goes crazy will he fire her?"
+        "When she goes crazy, will he fire her?"
       ],
       "formula": [
         {
@@ -1368,7 +1368,7 @@
       "type": "translate_ru_en",
       "ru": "Когда она сойдёт с ума, они её уволят?",
       "en": [
-        "When she goes crazy will they fire her?"
+        "When she goes crazy, will they fire her?"
       ],
       "formula": [
         {
@@ -1417,7 +1417,7 @@
       "type": "translate_ru_en",
       "ru": "Когда они её уволят, она сойдёт с ума?",
       "en": [
-        "When they fire her will she go crazy?"
+        "When they fire her, will she go crazy?"
       ],
       "formula": [
         {
@@ -1681,7 +1681,7 @@
       "type": "translate_ru_en",
       "ru": "Если вы её не уволите, мы сойдём с ума.",
       "en": [
-        "If you do not fire her we will go crazy."
+        "If you do not fire her, we will go crazy."
       ],
       "formula": [
         {
@@ -1728,7 +1728,7 @@
       "type": "translate_ru_en",
       "ru": "Пока вы его не уволите, она не выйдет на пенсию.",
       "en": [
-        "Until you fire him she will not retire."
+        "Until you fire him, she will not retire."
       ],
       "formula": [
         {
@@ -1775,7 +1775,7 @@
       "type": "translate_ru_en",
       "ru": "Пока он не выйдет на пенсию, мы её не уволим.",
       "en": [
-        "Until he retires we will not fire her."
+        "Until he retires, we will not fire her."
       ],
       "formula": [
         {
@@ -1827,7 +1827,7 @@
       "type": "translate_ru_en",
       "ru": "Пока мы не уволим его, она не выйдет на пенсию.",
       "en": [
-        "Until we fire him she will not retire."
+        "Until we fire him, she will not retire."
       ],
       "formula": [
         {
@@ -1874,7 +1874,7 @@
       "type": "translate_ru_en",
       "ru": "Когда мы уволим его, она выйдет на пенсию.",
       "en": [
-        "When we fire him she will retire."
+        "When we fire him, she will retire."
       ],
       "formula": [
         {
@@ -1916,7 +1916,7 @@
       "type": "translate_ru_en",
       "ru": "Если он выйдет на пенсию, то он сойдёт с ума.",
       "en": [
-        "If he retires he will go crazy."
+        "If he retires, he will go crazy."
       ],
       "formula": [
         {
@@ -8696,7 +8696,7 @@
       "type": "translate_ru_en",
       "ru": "Если я расскажу правду, она его накажет.",
       "en": [
-        "If I tell the truth she will punish him."
+        "If I tell the truth, she will punish him."
       ],
       "formula": [
         {
@@ -8794,7 +8794,7 @@
       "type": "translate_ru_en",
       "ru": "Если я не расскажу правду, она его не накажет.",
       "en": [
-        "If I do not tell the truth she will not punish him."
+        "If I do not tell the truth, she will not punish him."
       ],
       "formula": [
         {
@@ -8848,7 +8848,7 @@
       "type": "translate_ru_en",
       "ru": "Если я расскажу правду, вы его накажете?",
       "en": [
-        "If I tell the truth will you punish him?"
+        "If I tell the truth, will you punish him?"
       ],
       "formula": [
         {
@@ -8946,7 +8946,7 @@
       "type": "translate_ru_en",
       "ru": "Если я расскажу правду, его накажут.",
       "en": [
-        "If I tell the truth he will be punished."
+        "If I tell the truth, he will be punished."
       ],
       "formula": [
         {
@@ -8997,7 +8997,7 @@
       "type": "translate_ru_en",
       "ru": "Если я не расскажу правду, его не накажут.",
       "en": [
-        "If I do not tell the truth he will not be punished."
+        "If I do not tell the truth, he will not be punished."
       ],
       "formula": [
         {
@@ -9051,7 +9051,7 @@
       "type": "translate_ru_en",
       "ru": "Если я расскажу правду, его накажут?",
       "en": [
-        "If I tell the truth will he be punished?"
+        "If I tell the truth, will he be punished?"
       ],
       "formula": [
         {
@@ -9100,7 +9100,7 @@
       "type": "translate_ru_en",
       "ru": "Если я расскажу правду, его могут наказать.",
       "en": [
-        "If I tell the truth he can be punished."
+        "If I tell the truth, he can be punished."
       ],
       "formula": [
         {
@@ -9149,7 +9149,7 @@
       "type": "translate_ru_en",
       "ru": "Если он расскажет правду, мы не накажем его.",
       "en": [
-        "If he tells the truth we will not punish him."
+        "If he tells the truth, we will not punish him."
       ],
       "formula": [
         {
@@ -9201,7 +9201,7 @@
       "type": "translate_ru_en",
       "ru": "Если он не расскажет правду, мы накажем его.",
       "en": [
-        "If he does not tell the truth we will punish him."
+        "If he does not tell the truth, we will punish him."
       ],
       "formula": [
         {
@@ -9248,7 +9248,7 @@
       "type": "translate_ru_en",
       "ru": "Если он расскажет правду, мы его накажем?",
       "en": [
-        "If he tells the truth will we punish him?"
+        "If he tells the truth, will we punish him?"
       ],
       "formula": [
         {
@@ -9297,7 +9297,7 @@
       "type": "translate_ru_en",
       "ru": "Если он расскажет правду, его не накажут.",
       "en": [
-        "If he tells the truth he will not be punished."
+        "If he tells the truth, he will not be punished."
       ],
       "formula": [
         {
@@ -9353,7 +9353,7 @@
       "type": "translate_ru_en",
       "ru": "Если он не расскажет правду, его накажут.",
       "en": [
-        "If he does not tell the truth he will be punished."
+        "If he does not tell the truth, he will be punished."
       ],
       "formula": [
         {
@@ -9404,7 +9404,7 @@
       "type": "translate_ru_en",
       "ru": "Если он расскажет правду, его накажут?",
       "en": [
-        "If he tells the truth will he be punished?"
+        "If he tells the truth, will he be punished?"
       ],
       "formula": [
         {
@@ -9455,7 +9455,7 @@
       "type": "translate_ru_en",
       "ru": "Если он не расскажет правду, она может наказать его.",
       "en": [
-        "If he does not tell the truth she can punish him."
+        "If he does not tell the truth, she can punish him."
       ],
       "formula": [
         {
@@ -9504,7 +9504,7 @@
       "type": "translate_ru_en",
       "ru": "Если он расскажет правду, его могут наказать?",
       "en": [
-        "If he tells the truth can he be punished?"
+        "If he tells the truth, can he be punished?"
       ],
       "formula": [
         {
@@ -9553,7 +9553,7 @@
       "type": "translate_ru_en",
       "ru": "Если он расскажет правду, мне не следует наказывать его.",
       "en": [
-        "If he tells the truth I should not punish him."
+        "If he tells the truth, I should not punish him."
       ],
       "formula": [
         {
@@ -9605,7 +9605,7 @@
       "type": "translate_ru_en",
       "ru": "Если он расскажет правду, его не следует наказывать.",
       "en": [
-        "If he tells the truth he should not be punished."
+        "If he tells the truth, he should not be punished."
       ],
       "formula": [
         {

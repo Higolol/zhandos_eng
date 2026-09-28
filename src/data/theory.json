@@ -1,0 +1,2946 @@
+[
+  {
+    "id": "vedushchie-do-does",
+    "title": "Ведущие с кодом \"Do\" и \"Does\" (ДЕЛА)",
+    "topics": [
+      "dela"
+    ],
+    "sourceScheme": "01_do_does_vedushchie.jpg",
+    "body": [
+      "Ведущие (главные в предложении) определяют выбор кода в аспекте Дела (настоящее регулярное время).",
+      "Ведущие [[1:I]], [[1:You]], [[1:We]], [[1:They]] берут код [[0:do]] (делаю, делаете, делаем, делают).",
+      "Ведущие [[1:He]], [[1:She]], [[1:It]] берут код [[0:does]] (делает). В русском языке этому соответствует окончание «-ет / -ит».",
+      "Коды [[0:do]] и [[0:does]] отвечают за регулярные действия, факты, привычки и расписание."
+    ],
+    "examples": [
+      {
+        "en": "Why do they help us?",
+        "ru": "Почему они нам помогают?",
+        "literal": "Почему делают они помогать нам?",
+        "formula": [
+          {
+            "pos": -1,
+            "kind": "question",
+            "text": "Why"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "do"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "they"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "help"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "us"
+          }
+        ]
+      },
+      {
+        "en": "Does he teach English?",
+        "ru": "Он обучает английскому?",
+        "literal": "Делает он обучать английскому?",
+        "formula": [
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "Does"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "he"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "teach"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "English"
+          }
+        ]
+      },
+      {
+        "en": "Do you clean your room every day?",
+        "ru": "Ты убираешь свою комнату каждый день?",
+        "formula": [
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "Do"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "you"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "clean"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "your room"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "every day"
+          }
+        ]
+      },
+      {
+        "en": "They do not help me.",
+        "ru": "Они не помогают мне.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "They"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "do"
+          },
+          {
+            "pos": 0,
+            "kind": "neg",
+            "text": "not"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "help"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "me"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "formula",
+    "title": "Формула порядка слов (-1 0 1 2 3) и слова-вопросы",
+    "topics": [
+      "dela"
+    ],
+    "sourceScheme": "02_slova_voprosy_formula.jpg",
+    "body": [
+      "Английское предложение строится по строгому алгоритму позиций:",
+      "Позиция -1 (Вопрос): вопросительные слова — What [Что], Why [Почему / зачем], Where [Где / куда], When [Когда], How [Как], Who [Кто, Кем, Кому].",
+      "Позиция 0 (Код): грамматический маркер времени и залога (do, does, did, will, can, is, was, have...).",
+      "Позиция 1 (Ведущий): главный герой предложения (Кто? Что?).",
+      "Позиция 2 (Действие): смысловой глагол в нужной форме (V1, -ing, V3, been).",
+      "Позиция 3 (Объект): над кем или чем совершается действие.",
+      "Позиция ctx (Обстоятельства): время, место, способ совершения действия."
+    ],
+    "examples": [
+      {
+        "en": "Why do they help us?",
+        "ru": "Почему они нам помогают?",
+        "literal": "Почему делают они помогать нам?",
+        "formula": [
+          {
+            "pos": -1,
+            "kind": "question",
+            "text": "Why"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "do"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "they"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "help"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "us"
+          }
+        ]
+      },
+      {
+        "en": "When do you clean your room?",
+        "ru": "Когда ты убираешь свою комнату?",
+        "literal": "Когда делаешь ты убирать твою комнату?",
+        "formula": [
+          {
+            "pos": -1,
+            "kind": "question",
+            "text": "When"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "do"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "you"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "clean"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "your room"
+          }
+        ]
+      },
+      {
+        "en": "Where does he teach English?",
+        "ru": "Где он преподает английский?",
+        "literal": "Где делает он обучать английскому?",
+        "formula": [
+          {
+            "pos": -1,
+            "kind": "question",
+            "text": "Where"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "does"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "he"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "teach"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "English"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "did-hidden-code",
+    "title": "DID — Дела в прошедшем и скрытый код",
+    "topics": [
+      "dela"
+    ],
+    "sourceScheme": "03_did_skrytyi_kod.jpg",
+    "body": [
+      "Код [[0:did]] означает прошедшее действие в аспекте Дела: «делал, делала, делали».",
+      "В эмоциональных высказываниях или при подчеркивании факта код [[0:did]] стоит открыто: [[1:They]] [[0:did]] [[2:help]] [[3:me]]! («Они действительно помогали мне!»).",
+      "В обычном утверждении код [[0:did]] «прячется» внутрь глагола, образуя вторую форму глагола с окончанием [[2:-ed]]: They [[2:helped]] me (helped = did help).",
+      "В вопросах и отрицаниях код [[0:did]] всегда выходит наружу, а смысловой глагол возвращается в первую словарную форму (V1): Did they help you? They did not help me."
+    ],
+    "examples": [
+      {
+        "en": "They did help me.",
+        "ru": "Они действительно помогали мне!",
+        "literal": "Они делали помогать мне.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "They"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "did"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "help"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "me"
+          }
+        ]
+      },
+      {
+        "en": "They helped me.",
+        "ru": "Они помогали мне.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "They"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "helped",
+            "hiddenCode": "did"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "me"
+          }
+        ]
+      },
+      {
+        "en": "Did they help you?",
+        "ru": "Они помогли тебе?",
+        "formula": [
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "Did"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "they"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "help"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "you"
+          }
+        ]
+      },
+      {
+        "en": "They did not help me.",
+        "ru": "Они не помогли мне.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "They"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "did"
+          },
+          {
+            "pos": 0,
+            "kind": "neg",
+            "text": "not"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "help"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "me"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "codes-modals",
+    "title": "Модальные коды (can, could, will, would, should, must)",
+    "topics": [
+      "modals"
+    ],
+    "sourceScheme": "HW1",
+    "body": [
+      "Модальные коды занимают позицию 0 (Код) и выражают возможность, намерение или отношение к действию.",
+      "[[0:can]] — может (физическая возможность или умение). [[0:could]] — мог, могли, мог бы.",
+      "[[0:will]] — будущее время (намерение, желание). [[0:would]] — частица «бы» (желал бы).",
+      "[[0:should]] — следует, стоит (совет, рекомендация). [[0:must]] — должен, обязан.",
+      "После любого модального кода смысловой глагол всегда ставится в начальной форме V1 без частицы to."
+    ],
+    "examples": [
+      {
+        "en": "She can ask.",
+        "ru": "Она может спросить.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "She"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "can"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "ask"
+          }
+        ]
+      },
+      {
+        "en": "She can not ask.",
+        "ru": "Она не может спросить.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "She"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "can"
+          },
+          {
+            "pos": 0,
+            "kind": "neg",
+            "text": "not"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "ask"
+          }
+        ]
+      },
+      {
+        "en": "He would ask.",
+        "ru": "Он бы спросил.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "He"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "would"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "ask"
+          }
+        ]
+      },
+      {
+        "en": "You should ask.",
+        "ru": "Вам следует спросить.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "You"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "should"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "ask"
+          }
+        ]
+      },
+      {
+        "en": "Could they ask?",
+        "ru": "Могли ли они спросить?",
+        "formula": [
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "Could"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "they"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "ask"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "codes-be-present",
+    "title": "Коды состояния в настоящем (am, is, are)",
+    "topics": [
+      "sostoyanie"
+    ],
+    "sourceScheme": "04_kody_sostoyaniya_present.jpg",
+    "body": [
+      "В русском языке мы опускаем связку: «Я учитель», «Они студенты». В английском языке глагол обязателен: «Я являюсь учителем».",
+      "Коды состояния в настоящем времени:",
+      "[[1:I]] → [[0:am]] [являюсь]",
+      "[[1:You]], [[1:We]], [[1:They]] → [[0:are]] [являетесь, являемся, являются]",
+      "[[1:He]], [[1:She]], [[1:It]] → [[0:is]] [является]",
+      "Употребляются, когда мы называем профессию, качество, местонахождение или состояние Ведущего."
+    ],
+    "examples": [
+      {
+        "en": "I am a teacher.",
+        "ru": "Я учитель.",
+        "literal": "Я являюсь учителем.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "am"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "a teacher"
+          }
+        ]
+      },
+      {
+        "en": "He is a doctor.",
+        "ru": "Он врач.",
+        "literal": "Он является доктором.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "He"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "is"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "a doctor"
+          }
+        ]
+      },
+      {
+        "en": "They are students.",
+        "ru": "Они студенты.",
+        "literal": "Они являются студентами.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "They"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "are"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "students"
+          }
+        ]
+      },
+      {
+        "en": "Are you a student?",
+        "ru": "Вы студент?",
+        "literal": "Являетесь ли вы студентом?",
+        "formula": [
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "Are"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "you"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "a student"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "codes-be-past",
+    "title": "Коды состояния в прошедшем (was, were)",
+    "topics": [
+      "sostoyanie"
+    ],
+    "sourceScheme": "05_kody_sostoyaniya_past.jpg",
+    "body": [
+      "В прошедшем времени коды состояния показывают, кем или где был Ведущий:",
+      "[[1:I]], [[1:He]], [[1:She]], [[1:It]] → [[0:was]] [был / являлся].",
+      "[[1:You]], [[1:We]], [[1:They]] → [[0:were]] [были / являлись].",
+      "В вопросах код [[0:was]] / [[0:were]] выходит на позицию 0 перед Ведущим: Was he a doctor? Were they students?"
+    ],
+    "examples": [
+      {
+        "en": "I was a teacher.",
+        "ru": "Я был учителем.",
+        "literal": "Я являлся учителем.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "was"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "a teacher"
+          }
+        ]
+      },
+      {
+        "en": "They were students.",
+        "ru": "Они были студентами.",
+        "literal": "Они являлись студентами.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "They"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "were"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "students"
+          }
+        ]
+      },
+      {
+        "en": "She was a doctor.",
+        "ru": "Она была врачом.",
+        "literal": "Она являлась доктором.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "She"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "was"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "a doctor"
+          }
+        ]
+      },
+      {
+        "en": "Were you in America last year?",
+        "ru": "Вы были в Америке в прошлом году?",
+        "literal": "Являлись ли вы в Америке в прошлом году?",
+        "formula": [
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "Were"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "you"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "in America last year"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dela-vs-sostoyanie",
+    "title": "Дела vs Состояние (+ing = «-щий»)",
+    "topics": [
+      "dela",
+      "sostoyanie"
+    ],
+    "timeline": "sostoyanie",
+    "sourceScheme": "06_dela_vs_sostoyanie_timeline.jpg",
+    "body": [
+      "Дела (регулярно): действие повторяется с периодичностью. На таймлайне обозначается штрихами `///`. Коды: do, does, did. Маркеры: every day, last week, usually.",
+      "Состояние (в моменте): действие разворачивается в конкретной точке времени. На таймлайне обозначается точкой `●`. Коды: am, is, are, was, were.",
+      "Смысловой глагол в Состоянии получает суффикс [[ing:+ing]], который переводится как причастие на «-щий» (cleaning = убирающий, doing = делающий).",
+      "Буквальный смысл: [[1:I]] [[0:am]] [[ing:cleaning]] [[3:my room]] = «Я являюсь убирающим мою комнату» (прямо сейчас)."
+    ],
+    "examples": [
+      {
+        "en": "I clean my room every day.",
+        "ru": "Я убираю свою комнату каждый день.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "clean",
+            "hiddenCode": "do"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "my room"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "every day"
+          }
+        ]
+      },
+      {
+        "en": "I am cleaning my room.",
+        "ru": "Я убираю свою комнату прямо сейчас.",
+        "literal": "Я являюсь убирающим мою комнату.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "am"
+          },
+          {
+            "pos": 2,
+            "kind": "ing",
+            "text": "cleaning"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "my room"
+          }
+        ]
+      },
+      {
+        "en": "I cleaned my room last week.",
+        "ru": "Я убирал свою комнату на прошлой неделе.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "cleaned",
+            "hiddenCode": "did"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "my room"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "last week"
+          }
+        ]
+      },
+      {
+        "en": "We were cleaning my room at 10 am.",
+        "ru": "Мы убирали мою комнату в 10 часов утра.",
+        "literal": "Мы являлись убирающими мою комнату в 10 утра.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "We"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "were"
+          },
+          {
+            "pos": 2,
+            "kind": "ing",
+            "text": "cleaning"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "my room"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "at 10 am"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "passive-intro",
+    "title": "Ведущий действует vs Ведущий не действует (Пассив)",
+    "topics": [
+      "passive"
+    ],
+    "sourceScheme": "07_passive_intro.jpg",
+    "body": [
+      "Главное разделение залога по методике English Algorithm:",
+      "Ведущий действует (Актив): Ведущий сам совершает поступок. Формула: [[0:do, does, did]] + чёрный глагол (V1). «Я обучаю английскому» = [[1:I]] [[0:do]] [[2:teach]] [[3:English]].",
+      "Ведущий НЕ действует (Пассив): Действие направлено на Ведущего. Формула: [[0:am, is, are, was, were]] + 3-я форма глагола [[v3:V3]] (бирюзовый).",
+      "3-я форма глагола (V3) переводится как страдательное причастие «-нный / сделанный» (taught = обученный, washed = помытый, sent = отправленный).",
+      "«Меня обучают английскому» = [[1:I]] [[0:am]] [[v3:taught]] [[3:English]] (дословно: «Я являюсь обученным английскому»)."
+    ],
+    "examples": [
+      {
+        "en": "I teach English.",
+        "ru": "Я обучаю английскому.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "teach",
+            "hiddenCode": "do"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "English"
+          }
+        ]
+      },
+      {
+        "en": "I am taught English by my teacher.",
+        "ru": "Меня обучает английскому мой учитель.",
+        "literal": "Я являюсь обученным английскому моим учителем.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "am"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "taught"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "English"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "by my teacher"
+          }
+        ]
+      },
+      {
+        "en": "I was taught English.",
+        "ru": "Меня обучали английскому.",
+        "literal": "Я являлся обученным английскому.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "was"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "taught"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "English"
+          }
+        ]
+      },
+      {
+        "en": "The car was washed last week.",
+        "ru": "Машину помыли на прошлой неделе.",
+        "literal": "Машина являлась помытой на прошлой неделе.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "The car"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "was"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "washed"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "last week"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "passive-questions",
+    "title": "Вопросы в пассиве по позициям (-1 0 1 2 3)",
+    "topics": [
+      "passive"
+    ],
+    "sourceScheme": "08_passive_voprosy_formula.jpg",
+    "body": [
+      "Вопросы в пассиве строятся строго по формуле алгоритма:",
+      "Позиция -1: Вопрос (When, Why, What...).",
+      "Позиция 0: Код пассива (am, is, are, was, were).",
+      "Позиция 1: Ведущий — предмет или лицо, над которым совершают действие (this document, the window).",
+      "Позиция 2: Действие — 3-я форма глагола [[v3:V3]] (sent = отправленный, closed = закрытый).",
+      "Алгоритмический перевод снимает путаницу: «Когда отправляют этот документ?» переводим как «Когда является этот документ отправленным?» → [[-1:When]] [[0:is]] [[1:this document]] [[ctx:usually]] [[v3:sent]]?"
+    ],
+    "examples": [
+      {
+        "en": "When is this document usually sent?",
+        "ru": "Когда этот документ обычно отправляют?",
+        "literal": "Когда является этот документ обычно отправленным?",
+        "formula": [
+          {
+            "pos": -1,
+            "kind": "question",
+            "text": "When"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "is"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "this document"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "usually"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "sent"
+          }
+        ]
+      },
+      {
+        "en": "When is the window closed?",
+        "ru": "Когда закрывают это окно?",
+        "literal": "Когда является это окно закрытым?",
+        "formula": [
+          {
+            "pos": -1,
+            "kind": "question",
+            "text": "When"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "is"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "the window"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "closed"
+          }
+        ]
+      },
+      {
+        "en": "What does your colleague usually send you by email?",
+        "ru": "Что ваш коллега обычно отправляет вам по электронной почте?",
+        "literal": "Что делает ваш коллега обычно отправлять вам по электронной почте?",
+        "formula": [
+          {
+            "pos": -1,
+            "kind": "question",
+            "text": "What"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "does"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "your colleague"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "usually"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "send"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "you"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "by email"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "one-negation",
+    "title": "Одно отрицание в предложении (Nobody, Anybody, Never, Ever)",
+    "topics": [
+      "negation"
+    ],
+    "sourceScheme": "09_odno_otricanie.jpg",
+    "body": [
+      "В русском языке привычны фразы с несколькими отрицаниями: «Никто никогда нам не помогал».",
+      "В английском языке действует железный закон: В ПРЕДЛОЖЕНИИ МОЖЕТ БЫТЬ ТОЛЬКО ОДНО ОТРИЦАНИЕ!",
+      "Если предложение содержит [[1:Nobody]] (никто) или [[neg:never]] (никогда) — код и смысловой глагол обязаны оставаться утвердительными: [[1:Nobody]] [[0:will]] [[ctx:ever]] [[2:work]] with us.",
+      "Если в предложении отрицательный код (won't, doesn't, not) — вместо nobody/never используются утвердительные формы-партнёры: [[1:anybody]] (кто-либо) и [[ctx:ever]] (когда-либо).",
+      "Пары методики: Nobody (никто) ↔ Anybody (кто-нибудь, хоть кто); Never (никогда) ↔ Ever (когда-либо, хоть когда)."
+    ],
+    "examples": [
+      {
+        "en": "Nobody will ever work with us.",
+        "ru": "Никто никогда с нами не будет работать.",
+        "literal": "Никто будет когда-либо работать с нами.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "Nobody"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "will"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "ever"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "work"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "with us"
+          }
+        ]
+      },
+      {
+        "en": "Will anybody work with us?",
+        "ru": "Будет ли кто-нибудь работать с нами?",
+        "formula": [
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "Will"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "anybody"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "work"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "with us"
+          }
+        ]
+      },
+      {
+        "en": "Nobody wants to work in my company.",
+        "ru": "Никто не хочет работать в моей компании.",
+        "literal": "Никто хочет работать в моей компании.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "Nobody"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "wants",
+            "hiddenCode": "does"
+          },
+          {
+            "pos": 2,
+            "kind": "to",
+            "text": "to work"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "in my company"
+          }
+        ]
+      },
+      {
+        "en": "He will never work with us.",
+        "ru": "Он никогда не будет работать с нами.",
+        "literal": "Он будет никогда работать с нами.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "He"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "will"
+          },
+          {
+            "pos": 0,
+            "kind": "neg",
+            "text": "never"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "work"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "with us"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "three-aspects",
+    "title": "Три аспекта времени: Дела, В процессе, Сделанное",
+    "topics": [
+      "dela",
+      "sostoyanie",
+      "rezultat"
+    ],
+    "timeline": "rezultat",
+    "sourceScheme": "10_dela_process_sdelannoe_timeline.jpg",
+    "body": [
+      "Английская грамматика разделяет действия по трём базовым аспектам восприятия времени:",
+      "1. Дела (регулярно): повторяющиеся факты и привычки. Таймлайн: косые штрихи `///`. Коды: do, does, did. Маркер: every day, on Saturday.",
+      "2. В процессе (Состояние): действие происходит прямо в определённый момент времени. Таймлайн: точка `●`. Коды: am, is, are, was, were + глагол с окончанием [[ing:-ing]]. Маркер: right now, at 10 am.",
+      "3. Сделанное (Результат): действие уже совершено, результат актуален сейчас. Таймлайн: дуга из прошлого в Now. Коды: have, has, had + 3-я форма глагола [[v3:V3]]. Маркер: already, yet."
+    ],
+    "examples": [
+      {
+        "en": "I clean my room every day.",
+        "ru": "Я убираю свою комнату каждый день.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "clean",
+            "hiddenCode": "do"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "my room"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "every day"
+          }
+        ]
+      },
+      {
+        "en": "I am cleaning my room.",
+        "ru": "Я убираю свою комнату прямо сейчас.",
+        "literal": "Я являюсь убирающим мою комнату.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "am"
+          },
+          {
+            "pos": 2,
+            "kind": "ing",
+            "text": "cleaning"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "my room"
+          }
+        ]
+      },
+      {
+        "en": "I have done my homework.",
+        "ru": "Я сделал свою домашнюю работу.",
+        "literal": "Я имею сделанным мою домашнюю работу.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "have"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "done"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "my homework"
+          }
+        ]
+      },
+      {
+        "en": "I was cleaning my room at 10 am.",
+        "ru": "Я убирал свою комнату в 10 утра.",
+        "literal": "Я являлся убирающим мою комнату в 10 утра.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "was"
+          },
+          {
+            "pos": 2,
+            "kind": "ing",
+            "text": "cleaning"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "my room"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "at 10 am"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "passive-timelines",
+    "title": "Пассив на таймлайнах: Дела, Процесс и Сделанное",
+    "topics": [
+      "passive"
+    ],
+    "timeline": "rezultat",
+    "sourceScheme": "13_passive_timeline_3.jpg",
+    "body": [
+      "Пассивные формы (когда Ведущий не действует) полностью параллельны трём временным аспектам:",
+      "Регулярные дела: [[1:The car]] [[0:is]] [[v3:washed]] every day (Машину моют каждый день). В прошедшем: The car [[0:was]] [[v3:washed]] last week.",
+      "Процесс в моменте: [[1:The car]] [[0:is]] [[been:being]] [[v3:washed]] (Машину моют прямо сейчас — она является бывающей помытой). В прошедшем: The car [[0:was]] [[been:being]] [[v3:washed]] at 10 am.",
+      "Сделанное (Результат): [[1:The car]] [[0:has]] [[been:been]] [[v3:washed]] (Машина имеет себя помытой).",
+      "Обратите внимание на цветные индикаторы методики: в процессе появляется [[been:being]], в результате — [[been:been]], а смысловой глагол всегда остаётся в 3-й форме [[v3:V3]]."
+    ],
+    "examples": [
+      {
+        "en": "The car is washed every day.",
+        "ru": "Машину моют каждый день.",
+        "literal": "Машина является помытой каждый день.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "The car"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "is"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "washed"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "every day"
+          }
+        ]
+      },
+      {
+        "en": "The car is being washed.",
+        "ru": "Машину моют прямо сейчас.",
+        "literal": "Машина является бывающей помытой.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "The car"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "is"
+          },
+          {
+            "pos": 2,
+            "kind": "been",
+            "text": "being"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "washed"
+          }
+        ]
+      },
+      {
+        "en": "The car was being washed at 10 am yesterday.",
+        "ru": "Машину мыли вчера в 10 утра.",
+        "literal": "Машина являлась бывающей мытой в 10 утра вчера.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "The car"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "was"
+          },
+          {
+            "pos": 2,
+            "kind": "been",
+            "text": "being"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "washed"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "at 10 am yesterday"
+          }
+        ]
+      },
+      {
+        "en": "The car has been washed.",
+        "ru": "Машина помыта.",
+        "literal": "Машина имеет себя помытой.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "The car"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "has"
+          },
+          {
+            "pos": 2,
+            "kind": "been",
+            "text": "been"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "washed"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rezultat-active-passive",
+    "title": "Результат: Актив vs Пассив (have cooked vs has been cooked)",
+    "topics": [
+      "rezultat",
+      "passive"
+    ],
+    "sourceScheme": "14_rezultat_active_passive.jpg",
+    "body": [
+      "В аспекте Результат глагол [[0:have]] / [[0:has]] буквально переводится как «имею / имеет»:",
+      "Есть действующий (Актив): Ведущий сам имеет результат своих действий к текущей минуте.",
+      "Формула: [[1:Ведущий]] + [[0:have / has]] + [[v3:3-я форма глагола (V3)]].",
+      "Пример: [[1:I]] [[0:have]] [[v3:cooked]] [[3:my breakfast]] already («Я имею приготовленным мой завтрак»).",
+      "Нет действующего (Пассив): Предмет имеет себя сделанным к текущей минуте.",
+      "Формула: [[1:Объект]] + [[0:have / has]] + [[been:been]] + [[v3:3-я форма глагола (V3)]].",
+      "Пример: [[1:My breakfast]] [[0:has]] [[been:been]] [[v3:cooked]] («Мой завтрак имеет себя приготовленным»)."
+    ],
+    "examples": [
+      {
+        "en": "I have cooked my breakfast already.",
+        "ru": "Я уже приготовил свой завтрак.",
+        "literal": "Я имею приготовленным мой завтрак уже.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "have"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "cooked"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "my breakfast"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "already"
+          }
+        ]
+      },
+      {
+        "en": "My breakfast has been cooked.",
+        "ru": "Мой завтрак приготовлен.",
+        "literal": "Мой завтрак имеет себя приготовленным.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "My breakfast"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "has"
+          },
+          {
+            "pos": 2,
+            "kind": "been",
+            "text": "been"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "cooked"
+          }
+        ]
+      },
+      {
+        "en": "They have washed my car.",
+        "ru": "Они помыли мою машину.",
+        "literal": "Они имеют помытой мою машину.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "They"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "have"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "washed"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "my car"
+          }
+        ]
+      },
+      {
+        "en": "My car has been washed.",
+        "ru": "Моя машина помыта.",
+        "literal": "Моя машина имеет себя помытой.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "My car"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "has"
+          },
+          {
+            "pos": 2,
+            "kind": "been",
+            "text": "been"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "washed"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "four-aspects",
+    "title": "Четыре аспекта методики (+ «Имею право»)",
+    "topics": [
+      "imeyu_pravo",
+      "rezultat",
+      "sostoyanie",
+      "dela"
+    ],
+    "timeline": "imeyu_pravo",
+    "sourceScheme": "15_chetyre_aspekta_timeline.jpg",
+    "body": [
+      "Методика Жандоса Адетбекова выделяет 4 ключевых аспекта английского языка:",
+      "1. Дела (do, does, did): регулярные дела, привычки и факты (штрихи `///`).",
+      "2. Состояние (am, is, are, was, were + ing): процесс в моменте (точка `●`).",
+      "3. Результат (have, has, had + V3): факт сделанного к контрольной точке (дуга из прошлого в Now).",
+      "4. Имею право (have / has been + ing): действие началось в прошлом и длится до сих пор (отрезок со стрелкой в Now).",
+      "Суть аспекта «Имею право»: раз процесс шёл в прошлом и дошёл до сейчас, Ведущий «имеет право» заявить об этом стаже и опыте!",
+      "Маркеры аспекта: [[-1:How long]] (как долго?), [[ctx:since]] (с какого момента времени), [[ctx:for]] (на протяжении какого периода)."
+    ],
+    "examples": [
+      {
+        "en": "I have been working at this company for 3 years.",
+        "ru": "Я работаю в этой компании на протяжении 3 лет.",
+        "literal": "Я имею бывшим работающим в этой компании в течение 3 лет.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "have"
+          },
+          {
+            "pos": 2,
+            "kind": "been",
+            "text": "been"
+          },
+          {
+            "pos": 2,
+            "kind": "ing",
+            "text": "working"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "at this company for 3 years"
+          }
+        ]
+      },
+      {
+        "en": "I have been working at this company since 2022.",
+        "ru": "Я работаю в этой компании с 2022 года.",
+        "literal": "Я имею бывшим работающим в этой компании с 2022 года.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "have"
+          },
+          {
+            "pos": 2,
+            "kind": "been",
+            "text": "been"
+          },
+          {
+            "pos": 2,
+            "kind": "ing",
+            "text": "working"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "at this company since 2022"
+          }
+        ]
+      },
+      {
+        "en": "How long have you been working at this company?",
+        "ru": "Как долго вы работаете в этой компании?",
+        "literal": "Как долго имеете вы бывшим работающим в этой компании?",
+        "formula": [
+          {
+            "pos": -1,
+            "kind": "question",
+            "text": "How long"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "have"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "you"
+          },
+          {
+            "pos": 2,
+            "kind": "been",
+            "text": "been"
+          },
+          {
+            "pos": 2,
+            "kind": "ing",
+            "text": "working"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "at this company"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "matrix-4x3",
+    "title": "Матрица активного залога 4×3",
+    "topics": [
+      "mixed"
+    ],
+    "sourceScheme": "19_matrix_active_4x3.jpg",
+    "body": [
+      "Сводная матрица всех 12 временных форм активного залога по системе English Algorithm (4 аспекта × 3 времени):",
+      "Дела: Прошлое: [[0:did]] (helped) | Настоящее: [[0:do / does]] (clean/cleans) | Будущее: [[0:will]] clean.",
+      "Состояние: Прошлое: [[0:was / were]] doing | Настоящее: [[0:am / is / are]] doing | Будущее: [[0:will be]] doing.",
+      "Результат: Прошлое: [[0:had]] done | Настоящее: [[0:have / has]] done | Будущее: [[0:will have]] done.",
+      "Имею право: Прошлое: [[0:had been]] doing | Настоящее: [[0:have / has been]] doing | Будущее: [[0:will have been]] doing."
+    ],
+    "examples": [
+      {
+        "en": "He teaches English.",
+        "ru": "Он обучает английскому (регулярно).",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "He"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "teaches",
+            "hiddenCode": "does"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "English"
+          }
+        ]
+      },
+      {
+        "en": "He is teaching English.",
+        "ru": "Он обучает английскому прямо сейчас.",
+        "literal": "Он является обучающим английскому.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "He"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "is"
+          },
+          {
+            "pos": 2,
+            "kind": "ing",
+            "text": "teaching"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "English"
+          }
+        ]
+      },
+      {
+        "en": "He has taught English.",
+        "ru": "Он обучил английскому.",
+        "literal": "Он имеет обученным английскому.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "He"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "has"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "taught"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "English"
+          }
+        ]
+      },
+      {
+        "en": "He has been teaching English for many years.",
+        "ru": "Он обучает английскому уже много лет.",
+        "literal": "Он имеет бывшим обучающим английскому много лет.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "He"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "has"
+          },
+          {
+            "pos": 2,
+            "kind": "been",
+            "text": "been"
+          },
+          {
+            "pos": 2,
+            "kind": "ing",
+            "text": "teaching"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "English"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "for many years"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tense-consistency",
+    "title": "Согласование времён в тексте (Tense Consistency)",
+    "topics": [
+      "mixed"
+    ],
+    "sourceScheme": "11_tense_consistency.jpg",
+    "body": [
+      "Важнейшее правило связного высказывания: соблюдайте согласованность времён на уровне предложения.",
+      "Не меняйте время действий, если нет явного маркера смены момента времени.",
+      "НЕПРАВИЛЬНО: During the movie Sam [[2:stood]] up and then [[2:drops]] his popcorn (смешение Past и Present).",
+      "ПРАВИЛЬНО (в прошлом): During the movie Sam [[2:stood]] up and then [[2:dropped]] his popcorn.",
+      "ПРАВИЛЬНО (в настоящем): During the movie Sam [[2:stands]] up and then [[2:drops]] his popcorn."
+    ],
+    "examples": [
+      {
+        "en": "During the movie Sam stood up and then dropped his popcorn.",
+        "ru": "Во время фильма Сэм встал и затем уронил свой попкорн.",
+        "formula": [
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "During the movie"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "Sam"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "stood",
+            "hiddenCode": "did"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "up and then"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "dropped",
+            "hiddenCode": "did"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "his popcorn"
+          }
+        ]
+      },
+      {
+        "en": "During the movie Sam stands up and then drops his popcorn.",
+        "ru": "Во время фильма Сэм встает и затем роняет свой попкорн.",
+        "formula": [
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "During the movie"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "Sam"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "stands",
+            "hiddenCode": "does"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "up and then"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "drops",
+            "hiddenCode": "does"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "his popcorn"
+          }
+        ]
+      },
+      {
+        "en": "When we came, she had cleaned the office.",
+        "ru": "Когда мы пришли, она уже убрала офис.",
+        "formula": [
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "When we came"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "she"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "had"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "cleaned"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "the office"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "past-perfect",
+    "title": "Past Perfect: что случилось раньше другого события в прошлом",
+    "topics": [
+      "past_perfect"
+    ],
+    "sourceScheme": "20_past_perfect_examples.jpg",
+    "body": [
+      "Past Perfect ([[0:had]] + [[v3:V3]]) показывает предпрошедшее действие: то, что случилось РАНО, ДО другого события в прошлом.",
+      "Формула: [[1:Ведущий]] + [[0:had]] + [[v3:3-я форма глагола (V3)]].",
+      "Маркеры очерёдности: before (до того как), after (после того как), when (когда).",
+      "Пример очерёдности: «Before I found this place, I had stayed in my brother's house». Сначала жил у брата (had stayed = предпрошедшее), а потом нашел новое место (found = Past Simple)."
+    ],
+    "examples": [
+      {
+        "en": "Before we started this lesson, I had done my homework task.",
+        "ru": "До того как мы начали этот урок, я уже сделал своё домашнее задание.",
+        "literal": "До того как мы начали этот урок, я имел сделанным моё домашнее задание.",
+        "formula": [
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "Before we started this lesson"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "had"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "done"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "my homework task"
+          }
+        ]
+      },
+      {
+        "en": "Before I found this place, I had stayed in my brother's house.",
+        "ru": "До того как я нашел это место, я жил в доме своего брата.",
+        "formula": [
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "Before I found this place"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "had"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "stayed"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "in my brother's house"
+          }
+        ]
+      },
+      {
+        "en": "What had you done before we started our lesson?",
+        "ru": "Что ты сделал до того, как мы начали наш урок?",
+        "formula": [
+          {
+            "pos": -1,
+            "kind": "question",
+            "text": "What"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "had"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "you"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "done"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "before we started our lesson"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "future-perfect",
+    "title": "Future Perfect и Future Perfect Continuous (УЖЕ завершится к моменту)",
+    "topics": [
+      "future_perfect"
+    ],
+    "sourceScheme": "22_future_perfect_examples.jpg",
+    "body": [
+      "Future Perfect ([[0:will have]] + [[v3:V3]]) показывает действие, которое УЖЕ завершится к контрольному моменту в будущем (уже точно будет сделано).",
+      "Главный маркер: [[ctx:by]] (к определенному часу, дате или моменту).",
+      "Future Perfect Continuous ([[0:will have]] [[been:been]] + [[ing:-ing]]) подчеркивает непрерывный стаж действия, который накопится к будущему моменту.",
+      "Пример: By next month, I will have been working for a year at this company (К следующему месяцу исполнится ровно год, как я работаю в этой компании)."
+    ],
+    "examples": [
+      {
+        "en": "I will have finished my lesson by 2 pm.",
+        "ru": "Я уже закончу свой урок к двум часам дня.",
+        "literal": "Я буду иметь завершенным мой урок к двум часам дня.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "will"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "have"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "finished"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "my lesson"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "by 2 pm"
+          }
+        ]
+      },
+      {
+        "en": "By next month I will have been working for a year at this company.",
+        "ru": "К следующему месяцу исполнится год, как я работаю в этой компании.",
+        "literal": "К следующему месяцу я буду иметь бывшим работающим в течение года в этой компании.",
+        "formula": [
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "By next month"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "will"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "have"
+          },
+          {
+            "pos": 2,
+            "kind": "been",
+            "text": "been"
+          },
+          {
+            "pos": 2,
+            "kind": "ing",
+            "text": "working"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "for a year at this company"
+          }
+        ]
+      },
+      {
+        "en": "I will have repaired the statue on my father's grave by the end of this week.",
+        "ru": "Я отремонтирую статую на могиле моего отца к концу этой недели.",
+        "literal": "Я буду иметь отремонтированной статую на могиле моего отца к концу этой недели.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "will"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "have"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "repaired"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "the statue on my father's grave"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "by the end of this week"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "conditionals",
+    "title": "Условные предложения (If / When / Until): в первой части will НЕ ставится!",
+    "topics": [
+      "conditionals"
+    ],
+    "sourceScheme": "HW12, HW16",
+    "body": [
+      "Железное правило английского языка: в придаточных условия и времени (после союзов If, When, Until, As soon as, In case) будущее время WILL НЕ СТАВИТСЯ!",
+      "Вместо будущего ставится настоящее время (аспект Дела):",
+      "ВЕРНО: If he [[2:retires]], he [[0:will]] [[2:go]] crazy (Если он выйдет на пенсию, он сойдёт с ума).",
+      "НЕВЕРНО: *If he will retire...*",
+      "Будущее время с кодом [[0:will]] ставится ТОЛЬКО в главной части предложения.",
+      "Порядок частей может быть любым: If I tell the truth, she will punish him = She will punish him, if I tell the truth."
+    ],
+    "examples": [
+      {
+        "en": "If he retires, he will go crazy.",
+        "ru": "Если он выйдет на пенсию, он сойдёт с ума.",
+        "formula": [
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "If he retires"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "he"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "will"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "go"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "crazy"
+          }
+        ]
+      },
+      {
+        "en": "She will punish him if I tell the truth.",
+        "ru": "Она накажет его, если я скажу правду.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "She"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "will"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "punish"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "him"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "if I tell the truth"
+          }
+        ]
+      },
+      {
+        "en": "If I tell the truth, he will be punished.",
+        "ru": "Если я скажу правду, он будет наказан.",
+        "literal": "Если я скажу правду, он будет являться наказанным.",
+        "formula": [
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "If I tell the truth"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "he"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "will"
+          },
+          {
+            "pos": 2,
+            "kind": "been",
+            "text": "be"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "punished"
+          }
+        ]
+      },
+      {
+        "en": "When they fire her, she will go crazy.",
+        "ru": "Когда они уволят её, она сойдет с ума.",
+        "formula": [
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "When they fire her"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "she"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "will"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "go"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "crazy"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "there-is",
+    "title": "Конструкция There is / There are (Где-то что-то находится)",
+    "topics": [
+      "there_is"
+    ],
+    "sourceScheme": "HW17, HW22",
+    "body": [
+      "Различие между указанием на наличие предмета и описанием известного предмета:",
+      "Если мы сообщаем о появлении или наличии предмета в пространстве («В квартире есть стол») — предложение открывает конструкция [[1:There]] [[0:is]] (ед. число) или [[1:There]] [[0:are]] (мн. число).",
+      "Если предмет уже известен собеседнику («Мой стол стоит в квартире») — Ведущим выступает сам предмет: [[1:My table]] [[0:is]] [[ctx:in the apartment]].",
+      "В прошедшем времени используются [[0:was / were]]: There was a table / There were tables.",
+      "Вопрос: код выходит на нулевую позицию вперед: [[0:Is]] there a table in the apartment? [[-1:Why]] [[0:was]] there no table in the apartment?"
+    ],
+    "examples": [
+      {
+        "en": "There is a table in the apartment.",
+        "ru": "В квартире есть стол.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "There"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "is"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "a table"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "in the apartment"
+          }
+        ]
+      },
+      {
+        "en": "Is there a table in the apartment?",
+        "ru": "Есть ли стол в квартире?",
+        "formula": [
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "Is"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "there"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "a table"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "in the apartment"
+          }
+        ]
+      },
+      {
+        "en": "There are many tables in the apartment.",
+        "ru": "В квартире много столов.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "There"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "are"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "many tables"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "in the apartment"
+          }
+        ]
+      },
+      {
+        "en": "Why was there no table in the apartment?",
+        "ru": "Почему в квартире не было стола?",
+        "formula": [
+          {
+            "pos": -1,
+            "kind": "question",
+            "text": "Why"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "was"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "there"
+          },
+          {
+            "pos": 0,
+            "kind": "neg",
+            "text": "no"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "table"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "in the apartment"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "complex-object",
+    "title": "Сложное дополнение (Complex Object: want someone to do / need to be done)",
+    "topics": [
+      "complex_object"
+    ],
+    "sourceScheme": "HW18, HW20",
+    "body": [
+      "Конструкция побуждения и желания: «Я хочу, чтобы он...» / «Мне нужно, чтобы они...».",
+      "В английском языке союз «чтобы» (that) в таких конструкциях НЕ ИСПОЛЬЗУЕТСЯ!",
+      "Формула активного ожидания: [[1:Ведущий]] + [[2:want / need]] + [[3:объектное местоимение (him, her, them, us)]] + [[2:to + V1]].",
+      "Пример: [[1:I]] [[2:want]] [[3:him]] [[2:to surprise]] [[3:me]] («Я хочу, чтобы он удивил меня»).",
+      "Пассивное ожидание (когда действие над объектом должен совершить кто-то другой):",
+      "Формула: [[1:I]] [[2:need]] [[3:them]] [[2:to be]] [[v3:woken]] up («Мне нужно, чтобы их разбудили»).",
+      "Сравните: «I need to wake them up» (Мне нужно самому разбудить их) vs «I need them to be woken up» (Мне нужно, чтобы их разбудили)."
+    ],
+    "examples": [
+      {
+        "en": "I want him to surprise me.",
+        "ru": "Я хочу, чтобы он удивил меня.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "want",
+            "hiddenCode": "do"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "him"
+          },
+          {
+            "pos": 2,
+            "kind": "to",
+            "text": "to surprise"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "me"
+          }
+        ]
+      },
+      {
+        "en": "Do you want me to surprise you?",
+        "ru": "Ты хочешь, чтобы я удивил тебя?",
+        "formula": [
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "Do"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "you"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "want"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "me"
+          },
+          {
+            "pos": 2,
+            "kind": "to",
+            "text": "to surprise"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "you"
+          }
+        ]
+      },
+      {
+        "en": "I need them to be woken up.",
+        "ru": "Мне нужно, чтобы их разбудили.",
+        "literal": "Мне нужны они быть разбуженными.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "need",
+            "hiddenCode": "do"
+          },
+          {
+            "pos": 3,
+            "kind": "object",
+            "text": "them"
+          },
+          {
+            "pos": 2,
+            "kind": "to",
+            "text": "to be"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "woken"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "up"
+          }
+        ]
+      },
+      {
+        "en": "I need to be woken up.",
+        "ru": "Мне нужно, чтобы меня разбудили.",
+        "literal": "Мне нужно являться разбуженным.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "need",
+            "hiddenCode": "do"
+          },
+          {
+            "pos": 2,
+            "kind": "to",
+            "text": "to be"
+          },
+          {
+            "pos": 2,
+            "kind": "v3",
+            "text": "woken"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "up"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "must-have-to",
+    "title": "Must vs Have to (Внутреннее убеждение vs Внешняя необходимость)",
+    "topics": [
+      "must_have_to"
+    ],
+    "sourceScheme": "18_must_have_to_worksheet.jpg",
+    "body": [
+      "Различие двух видов должествования в английском:",
+      "Must: внутренний импульс, собственное твердое убеждение («Я должен вставать рано. Мне это нравится» → [[1:I]] [[0:must]] [[2:get]] up early. I like it).",
+      "Have to: внешнее принуждение, обстоятельства, распорядок или требования начальства («Я вынужден вставать рано, чтобы успеть на работу» → I have to get up early).",
+      "Временные формы:",
+      "У модального must НЕТ форм прошедшего и будущего времени!",
+      "В прошедшем времени используется [[2:had to]]: In childhood we had to get up early («В детстве мы должны были вставать рано»).",
+      "В будущем времени используется will have to: Tomorrow I will have to get up earlier («Завтра мне придется встать раньше»).",
+      "Вопросы и отрицания с have to строятся через вспомогательные коды do/does/did: Why do I have to get up so early? I do not have to get up early on Sundays."
+    ],
+    "examples": [
+      {
+        "en": "I must get up early.",
+        "ru": "Я должен вставать рано (мне это нравится).",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "must"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "get"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "up early"
+          }
+        ]
+      },
+      {
+        "en": "Why do I have to get up so early?",
+        "ru": "Почему я должен вставать так рано?",
+        "formula": [
+          {
+            "pos": -1,
+            "kind": "question",
+            "text": "Why"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "do"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 2,
+            "kind": "to",
+            "text": "have to"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "get"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "up so early"
+          }
+        ]
+      },
+      {
+        "en": "I do not have to get up early on Sundays.",
+        "ru": "Я не должен вставать рано по воскресеньям.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "do"
+          },
+          {
+            "pos": 0,
+            "kind": "neg",
+            "text": "not"
+          },
+          {
+            "pos": 2,
+            "kind": "to",
+            "text": "have to"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "get"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "up early on Sundays"
+          }
+        ]
+      },
+      {
+        "en": "In childhood we had to get up early.",
+        "ru": "В детстве мы должны были вставать рано.",
+        "formula": [
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "In childhood"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "we"
+          },
+          {
+            "pos": 2,
+            "kind": "to",
+            "text": "had to"
+          },
+          {
+            "pos": 2,
+            "kind": "verb",
+            "text": "get"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "up early"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "been-to-in",
+    "title": "Been to vs Been in vs Was in (Побывал vs Нахожусь период vs Был)",
+    "topics": [
+      "been_to_in"
+    ],
+    "sourceScheme": "HW30 s3-4, HW31",
+    "body": [
+      "Тонкие смысловые различия пребывания в стране или городе:",
+      "have been to [страна]: «побывал, съездил и вернулся» (личный жизненный опыт, аспект Результат).",
+      "Пример: [[1:I]] [[0:have]] [[been:been]] [[ctx:to America three times]] («Я побывал в Америке три раза»). Have you ever been to China? («Ты бывал когда-нибудь в Китае?»).",
+      "have been in [страна]: «нахожусь уже на протяжении периода времени» (аспект Имею право).",
+      "Пример: [[1:He]] [[0:has]] [[been:been]] [[ctx:in America since June]] («Он находится в Америке с июня»). How long have you been in Kazakhstan? («Как долго вы уже в Казахстане?»).",
+      "was in / were in [страна]: констатация факта в законченном прошлом (аспект Дела в прошлом).",
+      "Пример: [[1:I]] [[0:was]] [[ctx:in America last year]] («Я был в Америке в прошлом году»). When were you in Kazakhstan last time? («Когда вы были в Казахстане в последний раз?»)."
+    ],
+    "examples": [
+      {
+        "en": "I have been to America three times this year.",
+        "ru": "Я побывал в Америке три раза в этом году.",
+        "literal": "Я имею бывшим в Америку три раза в этом году.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "have"
+          },
+          {
+            "pos": 2,
+            "kind": "been",
+            "text": "been"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "to America three times this year"
+          }
+        ]
+      },
+      {
+        "en": "He has been in America since June.",
+        "ru": "Он находится в Америке с июня.",
+        "literal": "Он имеет бывшим в Америке с июня.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "He"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "has"
+          },
+          {
+            "pos": 2,
+            "kind": "been",
+            "text": "been"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "in America since June"
+          }
+        ]
+      },
+      {
+        "en": "I was in America three times last year.",
+        "ru": "Я был в Америке три раза в прошлом году.",
+        "formula": [
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "I"
+          },
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "was"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "in America three times last year"
+          }
+        ]
+      },
+      {
+        "en": "Have you ever been to China?",
+        "ru": "Вы когда-либо бывали в Китае?",
+        "literal": "Имеете ли вы когда-либо бывшим в Китае?",
+        "formula": [
+          {
+            "pos": 0,
+            "kind": "code",
+            "text": "Have"
+          },
+          {
+            "pos": 1,
+            "kind": "subject",
+            "text": "you"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "ever"
+          },
+          {
+            "pos": 2,
+            "kind": "been",
+            "text": "been"
+          },
+          {
+            "pos": "ctx",
+            "kind": "ctx",
+            "text": "to China"
+          }
+        ]
+      }
+    ]
+  }
+]
