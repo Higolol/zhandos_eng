@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --slot-verb: #111827;
+}
+
+.dark {
+  --slot-verb: #f3f4f6;
+}
+
+@layer base {
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  input, textarea, select {
+    user-select: text;
+    -webkit-user-select: text;
+    font-size: 16px !important; /* Prevents auto-zoom on iOS */
+  }
+
+  /* Tap target minimum 44px for primary interactive elements */
+  button, a {
+    touch-action: manipulation;
+  }
+}
+
+/* Safe area support for iOS / notched phones */
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.min-h-touch {
+  min-height: 44px;
+}
+
+.min-w-touch {
+  min-width: 44px;
+}

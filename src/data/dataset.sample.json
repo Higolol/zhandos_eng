@@ -1,0 +1,292 @@
+{
+  "version": "2026-09-28-sample",
+  "lessons": [
+    {
+      "hw": "HW1",
+      "title": "Модальные ключи",
+      "topics": ["modals"],
+      "instruction": "Составьте предложения с модальными ключами.",
+      "exerciseIds": ["SAMPLE-01"]
+    },
+    {
+      "hw": "HW2",
+      "title": "Дела: do, does, did",
+      "topics": ["dela", "negation"],
+      "instruction": "Практика скрытого кода и отрицания.",
+      "exerciseIds": ["SAMPLE-02", "SAMPLE-03"]
+    },
+    {
+      "hw": "HW3",
+      "title": "Состояние: am, is, are, was, were + ing",
+      "topics": ["sostoyanie"],
+      "instruction": "Процесс в настоящем и прошлом.",
+      "exerciseIds": ["SAMPLE-04", "SAMPLE-05"]
+    },
+    {
+      "hw": "HW5",
+      "title": "Результат: have, has, had + V3",
+      "topics": ["rezultat"],
+      "instruction": "Результат к моменту речи.",
+      "exerciseIds": ["SAMPLE-06"]
+    },
+    {
+      "hw": "HW6",
+      "title": "Пассивный залог в Результате",
+      "topics": ["passive", "rezultat"],
+      "instruction": "Пассив: Ведущий не действует.",
+      "exerciseIds": ["SAMPLE-07"]
+    },
+    {
+      "hw": "HW7",
+      "title": "Имею право: have been + ing",
+      "topics": ["imeyu_pravo"],
+      "instruction": "Действие длится с момента в прошлом до сих пор.",
+      "exerciseIds": ["SAMPLE-08"]
+    },
+    {
+      "hw": "HW8",
+      "title": "Вопросы WHO: к Ведущему и к объекту",
+      "topics": ["who_questions", "dela"],
+      "instruction": "Разница между Who helped you? и Who did you help?",
+      "exerciseIds": ["SAMPLE-09", "SAMPLE-10"]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "SAMPLE-01",
+      "hw": "HW1",
+      "lesson": 1,
+      "worksheet": "HW1_s1_image1.jpg",
+      "n": 1,
+      "type": "grid_build",
+      "ru": "Она может спросить.",
+      "en": ["She can ask."],
+      "formula": [
+        { "pos": 1, "kind": "subject", "text": "She" },
+        { "pos": 0, "kind": "code", "text": "can" },
+        { "pos": 2, "kind": "verb", "text": "ask" }
+      ],
+      "aspect": "modal",
+      "tense": "present",
+      "voice": "active",
+      "form": "affirmative",
+      "topics": ["modals"],
+      "code": "can",
+      "grid": {
+        "subject": "Она",
+        "meaning": "Может спросить"
+      },
+      "myPastAnswer": "She can ask",
+      "myPastAnswerOk": true
+    },
+    {
+      "id": "SAMPLE-02",
+      "hw": "HW2",
+      "lesson": 2,
+      "worksheet": "HW1_s2_image2.jpg",
+      "n": 2,
+      "type": "translate_ru_en",
+      "ru": "Он играет каждый день.",
+      "en": ["He plays every day."],
+      "literal": "Он делает играть каждый день.",
+      "formula": [
+        { "pos": 1, "kind": "subject", "text": "He" },
+        { "pos": 2, "kind": "verb", "text": "plays", "hiddenCode": "does" },
+        { "pos": "ctx", "kind": "ctx", "text": "every day" }
+      ],
+      "aspect": "dela",
+      "tense": "present",
+      "voice": "active",
+      "form": "affirmative",
+      "topics": ["dela"],
+      "code": "does"
+    },
+    {
+      "id": "SAMPLE-03",
+      "hw": "HW2",
+      "lesson": 2,
+      "worksheet": "HW1_s2_image2.jpg",
+      "n": 3,
+      "type": "translate_ru_en",
+      "ru": "Они не помогли мне вчера.",
+      "en": ["They did not help me yesterday."],
+      "formula": [
+        { "pos": 1, "kind": "subject", "text": "They" },
+        { "pos": 0, "kind": "code", "text": "did" },
+        { "pos": 0, "kind": "neg", "text": "not" },
+        { "pos": 2, "kind": "verb", "text": "help" },
+        { "pos": 3, "kind": "object", "text": "me" },
+        { "pos": "ctx", "kind": "ctx", "text": "yesterday" }
+      ],
+      "aspect": "dela",
+      "tense": "past",
+      "voice": "active",
+      "form": "negative",
+      "topics": ["dela", "negation"],
+      "code": "did"
+    },
+    {
+      "id": "SAMPLE-04",
+      "hw": "HW3",
+      "lesson": 3,
+      "worksheet": "HW1.2_s1_image3.jpg",
+      "n": 4,
+      "type": "translate_ru_en",
+      "ru": "Она сейчас читает книгу.",
+      "en": ["She is reading a book now."],
+      "formula": [
+        { "pos": 1, "kind": "subject", "text": "She" },
+        { "pos": 0, "kind": "code", "text": "is" },
+        { "pos": 2, "kind": "ing", "text": "reading" },
+        { "pos": 3, "kind": "object", "text": "a book" },
+        { "pos": "ctx", "kind": "ctx", "text": "now" }
+      ],
+      "aspect": "sostoyanie",
+      "tense": "present",
+      "voice": "active",
+      "form": "affirmative",
+      "topics": ["sostoyanie"],
+      "code": "is"
+    },
+    {
+      "id": "SAMPLE-05",
+      "hw": "HW3",
+      "lesson": 3,
+      "worksheet": "HW1.2_s1_image3.jpg",
+      "n": 5,
+      "type": "translate_ru_en",
+      "ru": "Ты спал в пять часов?",
+      "en": ["Were you sleeping at five o'clock?"],
+      "formula": [
+        { "pos": 0, "kind": "code", "text": "Were" },
+        { "pos": 1, "kind": "subject", "text": "you" },
+        { "pos": 2, "kind": "ing", "text": "sleeping" },
+        { "pos": "ctx", "kind": "ctx", "text": "at five o'clock" }
+      ],
+      "aspect": "sostoyanie",
+      "tense": "past",
+      "voice": "active",
+      "form": "yes_no_question",
+      "topics": ["sostoyanie"],
+      "code": "were"
+    },
+    {
+      "id": "SAMPLE-06",
+      "hw": "HW5",
+      "lesson": 5,
+      "worksheet": "HW1.2_s2_image2.jpg",
+      "n": 6,
+      "type": "translate_ru_en",
+      "ru": "Он уже закончил работу.",
+      "en": ["He has already finished the work."],
+      "formula": [
+        { "pos": 1, "kind": "subject", "text": "He" },
+        { "pos": 0, "kind": "code", "text": "has" },
+        { "pos": "ctx", "kind": "ctx", "text": "already" },
+        { "pos": 2, "kind": "v3", "text": "finished" },
+        { "pos": 3, "kind": "object", "text": "the work" }
+      ],
+      "aspect": "rezultat",
+      "tense": "present",
+      "voice": "active",
+      "form": "affirmative",
+      "topics": ["rezultat"],
+      "code": "has"
+    },
+    {
+      "id": "SAMPLE-07",
+      "hw": "HW6",
+      "lesson": 6,
+      "worksheet": "HW1.2_s3_image1.jpg",
+      "n": 7,
+      "type": "translate_ru_en",
+      "ru": "Письмо уже отправлено.",
+      "en": ["The letter has been sent."],
+      "literal": "Письмо имеет бытым отправленным.",
+      "formula": [
+        { "pos": 1, "kind": "subject", "text": "The letter" },
+        { "pos": 0, "kind": "code", "text": "has" },
+        { "pos": 2, "kind": "been", "text": "been" },
+        { "pos": 2, "kind": "v3", "text": "sent" }
+      ],
+      "aspect": "rezultat",
+      "tense": "present",
+      "voice": "passive",
+      "form": "affirmative",
+      "topics": ["passive", "rezultat"],
+      "code": "has been",
+      "myPastAnswer": "The letter has was sent",
+      "myPastAnswerOk": false,
+      "myPastAnswerNote": "Вместо been использован was; в результате пассив строится через have/has been + V3"
+    },
+    {
+      "id": "SAMPLE-08",
+      "hw": "HW7",
+      "lesson": 7,
+      "worksheet": "HW12_s1_image2.jpg",
+      "n": 8,
+      "type": "translate_ru_en",
+      "ru": "Как долго ты здесь живёшь?",
+      "en": ["How long have you been living here?"],
+      "formula": [
+        { "pos": -1, "kind": "question", "text": "How long" },
+        { "pos": 0, "kind": "code", "text": "have" },
+        { "pos": 1, "kind": "subject", "text": "you" },
+        { "pos": 2, "kind": "been", "text": "been" },
+        { "pos": 2, "kind": "ing", "text": "living" },
+        { "pos": "ctx", "kind": "ctx", "text": "here" }
+      ],
+      "aspect": "imeyu_pravo",
+      "tense": "present",
+      "voice": "active",
+      "form": "wh_question",
+      "topics": ["imeyu_pravo"],
+      "code": "have"
+    },
+    {
+      "id": "SAMPLE-09",
+      "hw": "HW8",
+      "lesson": 8,
+      "worksheet": "HW12_s2_image1.jpg",
+      "n": 9,
+      "type": "translate_ru_en",
+      "ru": "Кто помог тебе?",
+      "en": ["Who helped you?"],
+      "formula": [
+        { "pos": 1, "kind": "subject", "text": "Who" },
+        { "pos": 2, "kind": "verb", "text": "helped", "hiddenCode": "did" },
+        { "pos": 3, "kind": "object", "text": "you" }
+      ],
+      "aspect": "dela",
+      "tense": "past",
+      "voice": "active",
+      "form": "who_subject",
+      "topics": ["who_questions", "dela"],
+      "code": "did",
+      "pairId": "SAMPLE-10"
+    },
+    {
+      "id": "SAMPLE-10",
+      "hw": "HW8",
+      "lesson": 8,
+      "worksheet": "HW12_s2_image1.jpg",
+      "n": 10,
+      "type": "translate_ru_en",
+      "ru": "Кому ты помог?",
+      "en": ["Who did you help?"],
+      "formula": [
+        { "pos": -1, "kind": "question", "text": "Who" },
+        { "pos": 0, "kind": "code", "text": "did" },
+        { "pos": 1, "kind": "subject", "text": "you" },
+        { "pos": 2, "kind": "verb", "text": "help" }
+      ],
+      "aspect": "dela",
+      "tense": "past",
+      "voice": "active",
+      "form": "who_object",
+      "topics": ["who_questions", "dela"],
+      "code": "did",
+      "pairId": "SAMPLE-09"
+    }
+  ]
+}
