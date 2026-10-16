@@ -1037,7 +1037,6 @@
       "ru": "Почему он ничего не купил?",
       "en": [
         "Why did he not buy anything?",
-        "Why didn't he buy anything?",
         "Why did he buy nothing?"
       ],
       "formula": [
@@ -9163,8 +9162,7 @@
       "type": "translate_ru_en",
       "ru": "Почему Вы в прошлом году не были в Америке?",
       "en": [
-        "Why were you not in America last year?",
-        "Why weren't you in America last year?"
+        "Why were you not in America last year?"
       ],
       "formula": [
         {
@@ -9220,8 +9218,7 @@
       "type": "translate_ru_en",
       "ru": "Почему ты в прошлом году не был в Америке?",
       "en": [
-        "Why were you not in America last year?",
-        "Why weren't you in America last year?"
+        "Why were you not in America last year?"
       ],
       "formula": [
         {
@@ -9277,8 +9274,7 @@
       "type": "translate_ru_en",
       "ru": "Почему он в прошлом году не был в Америке?",
       "en": [
-        "Why was he not in America last year?",
-        "Why wasn't he in America last year?"
+        "Why was he not in America last year?"
       ],
       "formula": [
         {
@@ -10777,8 +10773,7 @@
       "code": "did",
       "literal": "Почему не делал ты иметь вставать рано?",
       "myPastAnswer": "Why didn’t you have to get up early?",
-      "myPastAnswerOk": false,
-      "myPastAnswerNote": "Стяжённая форма didn't you (при раскрытии did not you) отличается порядком слов от эталона did you not."
+      "myPastAnswerOk": true
     },
     {
       "id": "HW33-s1-01",

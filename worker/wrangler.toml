@@ -1,0 +1,12 @@
+name = "ea-proxy"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://higolol.github.io,http://localhost:5173,http://localhost:4173"
+DAILY_LIMIT_PER_CODE = "60"
+
+# После выполнения `wrangler kv namespace create LIMITS` раскомментируйте и впишите полученный id:
+# [[kv_namespaces]]
+# binding = "LIMITS"
+# id = "<ВПИШИТЕ_ID_ИЗ_WRANGLER_KV_CREATE>"

@@ -2143,8 +2143,7 @@
       "type": "translate_ru_en",
       "ru": "Почему я не могу платить?",
       "en": [
-        "Why can I not pay?",
-        "Why can't I pay?"
+        "Why can I not pay?"
       ],
       "formula": [
         {
@@ -10419,7 +10418,8 @@
       "type": "translate_ru_en",
       "ru": "Почему мой стол не в квартире?",
       "en": [
-        "Why is my table not in the apartment?"
+        "Why is my table not in the apartment?",
+        "Why isn't my table in the apartment?"
       ],
       "formula": [
         {

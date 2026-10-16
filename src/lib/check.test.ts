@@ -97,6 +97,44 @@ describe('check.ts: локальная проверка ответов', () => {
       }
       expect(mismatches).toBe(0);
     });
+
+    const findEx = (id: string): Exercise => {
+      const ex = exercises.find((e) => e.id === id);
+      if (!ex) throw new Error(`Exercise ${id} not found`);
+      return ex;
+    };
+
+    it('F1 probe 1: HW2-s1-09 "She remember." -> wrong (потерян скрытый код does)', () => {
+      expect(check('She remember.', findEx('HW2-s1-09')).verdict).toBe('wrong');
+    });
+
+    it('F1 probe 2: HW2-s1-13 "She remember." -> wrong (потерян скрытый did)', () => {
+      expect(check('She remember.', findEx('HW2-s1-13')).verdict).toBe('wrong');
+    });
+
+    it('F1 probe 3: HW8-s1-06 "Who call you every time?" -> wrong', () => {
+      expect(check('Who call you every time?', findEx('HW8-s1-06')).verdict).toBe('wrong');
+    });
+
+    it('F1 probe 4: HW32-s1-20 "Why didn\'t you have to get up early?" -> exact', () => {
+      expect(check("Why didn't you have to get up early?", findEx('HW32-s1-20')).verdict).toBe('exact');
+    });
+
+    it('F1 probe 5: HW15-s2-03c "Why don\'t I teach?" -> exact', () => {
+      expect(check("Why don't I teach?", findEx('HW15-s2-03c')).verdict).toBe('exact');
+    });
+
+    it('F1 probe 6: HW3-s1-02 "I am going to cinema." -> near', () => {
+      expect(check('I am going to cinema.', findEx('HW3-s1-02')).verdict).toBe('near');
+    });
+
+    it('F1 probe 7: HW24-s2-32 "When has this bank been robbed?" -> wrong', () => {
+      expect(check('When has this bank been robbed?', findEx('HW24-s2-32')).verdict).toBe('wrong');
+    });
+
+    it('F1 probe 8: HW13-s2-11a "I should not pay for other peoples mistakes." -> near', () => {
+      expect(check('I should not pay for other peoples mistakes.', findEx('HW13-s2-11a')).verdict).toBe('near');
+    });
   });
 
   describe('progress.ts: сохранение попыток и статистика', async () => {

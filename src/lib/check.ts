@@ -1,4 +1,4 @@
-import type { Exercise } from '../types';
+import type { Exercise, SlotKind } from '../types';
 
 export const CODE_WORDS = new Set([
   'do',
@@ -18,10 +18,24 @@ export const CODE_WORDS = new Set([
   'could',
   'should',
   'must',
+  'shall',
   'be',
   'been',
   'being',
   'not',
+  'never',
+  'no',
+]);
+
+export const PROTECTED_SLOT_KINDS = new Set<SlotKind>([
+  'verb',
+  'v3',
+  'ing',
+  'been',
+  'to',
+  'code',
+  'neg',
+  'question',
 ]);
 
 export type DiffKind = 'same' | 'missing' | 'extra' | 'replaced';
@@ -38,12 +52,16 @@ export interface CheckResult {
   diff?: DiffToken[];
 }
 
+const NEG_QUESTION_PRON_RE =
+  /\b(do|does|did|am|is|are|was|were|have|has|had|will|would|can|could|should|must|shall) not (i|you|he|she|it|we|they|there)\b/g;
+
 /**
  * Нормализация строки в набор эквивалентных вариантов:
  * 1. Нижний регистр, trim, апострофы ’‘ → ', убираются скобки ученика и пунктуация .,!?;:"«»
  * 2. Раскрытие однозначных сокращений: won't, can't/cannot, shan't, n't, 'm, 're, 've, 'll
  * 3. whom ≡ who
  * 4. Двусмысленные 's (is/has) и 'd (would/had): порождаются все комбинации + исходный вид для притяжательных
+ * 5. Стяжение в отрицательном вопросе с Ведущим-местоимением: AUX not PRON → AUX PRON not
  */
 export function normalizeToVariants(raw: string): string[] {
   let s = (raw || '')
@@ -59,6 +77,7 @@ export function normalizeToVariants(raw: string): string[] {
     ["shan't", 'shall not'],
     ["n't", ' not'],
     ["i'm", 'i am'],
+    ["'m", ' am'],
     ["'re", ' are'],
     ["'ve", ' have'],
     ["'ll", ' will'],
@@ -102,6 +121,7 @@ export function normalizeToVariants(raw: string): string[] {
             .split(/\s+/)
             .filter(Boolean)
             .join(' ')
+            .replace(NEG_QUESTION_PRON_RE, '$1 $2 not')
         )
         .filter(Boolean)
     )
@@ -182,6 +202,24 @@ export function computeWordDiff(
 }
 
 /**
+ * Собирает множество защищённых слов эталона (коды + слоты verb/v3/ing/been/to/code/neg/question),
+ * отличие в которых всегда даёт wrong, а не near.
+ */
+function getProtectedWords(ex: Exercise): Set<string> {
+  const protectedWords = new Set<string>(CODE_WORDS);
+  for (const slot of ex.formula || []) {
+    if (PROTECTED_SLOT_KINDS.has(slot.kind)) {
+      for (const variant of normalizeToVariants(slot.text)) {
+        for (const w of variant.split(' ')) {
+          if (w) protectedWords.add(w);
+        }
+      }
+    }
+  }
+  return protectedWords;
+}
+
+/**
  * Локальная проверка ответа пользователя
  */
 export function check(answer: string, ex: Exercise): CheckResult {
@@ -223,11 +261,12 @@ export function check(answer: string, ex: Exercise): CheckResult {
   }
 
   // 2. Ближайший вариант (near vs wrong)
+  const protectedWords = getProtectedWords(ex);
   let bestDist = Infinity;
   let bestCharDist = Infinity;
   let bestMatched = ex.en[0];
   let bestTokens: DiffToken[] = [];
-  let bestCodeTouched = false;
+  let bestProtectedTouched = false;
 
   for (let idx = 0; idx < ex.en.length; idx++) {
     const rawEn = ex.en[idx];
@@ -241,11 +280,18 @@ export function check(answer: string, ex: Exercise): CheckResult {
         const { dist, tokens } = computeWordDiff(sWords, eWords);
         const charD = charLevenshtein(sVar, eVar);
 
-        let codeTouched = false;
+        let protectedTouched = false;
         for (const t of tokens) {
           if (t.type === 'same') continue;
-          if (t.text && CODE_WORDS.has(t.text)) codeTouched = true;
-          if (t.expected && CODE_WORDS.has(t.expected)) codeTouched = true;
+          if (t.type === 'missing' && t.text && protectedWords.has(t.text)) {
+            protectedTouched = true;
+          } else if (t.type === 'replaced') {
+            if ((t.expected && protectedWords.has(t.expected)) || (t.text && protectedWords.has(t.text))) {
+              protectedTouched = true;
+            }
+          } else if (t.type === 'extra' && t.text && protectedWords.has(t.text)) {
+            protectedTouched = true;
+          }
         }
 
         if (dist < bestDist || (dist === bestDist && charD < bestCharDist)) {
@@ -253,14 +299,15 @@ export function check(answer: string, ex: Exercise): CheckResult {
           bestCharDist = charD;
           bestMatched = rawEn;
           bestTokens = tokens;
-          bestCodeTouched = codeTouched;
+          bestProtectedTouched = protectedTouched;
         }
       }
     }
   }
 
-  // near: пословное расстояние <= 1 ИЛИ опечатка слитно/раздельно (charDist <= 1), и не затронут код
-  if (!bestCodeTouched && (bestDist <= 1 || bestCharDist <= 1)) {
+  // near: пословное расстояние <= 1 ИЛИ опечатка слитно/раздельно (charDist <= 1),
+  // и НЕ затронуты защищённые слоты формулы (verb/v3/ing/been/to/code/neg/question)
+  if (!bestProtectedTouched && (bestDist <= 1 || bestCharDist <= 1)) {
     return {
       verdict: 'near',
       matched: bestMatched,

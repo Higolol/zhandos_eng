@@ -14,8 +14,11 @@ export const DEFAULT_SETTINGS: AppSettings = {
   aiMode: import.meta.env.DEV ? 'dev' : 'proxy',
   accessCode: '',
   openrouterKey: '',
-  primaryModel: 'google/gemini-2.5-flash',
-  fallbackModels: ['meta-llama/llama-3.3-70b-instruct'],
+  primaryModel: 'nvidia/nemotron-3-super-120b-a12b:free',
+  fallbackModels: [
+    'qwen/qwen3-next-80b-a3b-instruct:free',
+    'openai/gpt-oss-120b:free',
+  ],
   theme: 'system',
 };
 
@@ -71,3 +74,28 @@ export function applyTheme(theme: ThemeMode): void {
     console.error('Failed to apply theme:', err);
   }
 }
+
+/**
+ * Проверка готовности настроек ИИ для текущего режима.
+ * В режиме 'dev' ключ инжектируется прокси Vite, поэтому готов всегда.
+ * В режиме 'proxy' требуется accessCode.
+ * В режиме 'byok' требуется openrouterKey.
+ */
+export function isAiReady(customSettings?: AppSettings): boolean {
+  const s = customSettings ?? getSettings();
+  if (s.aiMode === 'dev') return true;
+  if (s.aiMode === 'proxy') return Boolean(s.accessCode.trim());
+  if (s.aiMode === 'byok') return Boolean(s.openrouterKey.trim());
+  return false;
+}
+
+/**
+ * Обновить выбранную основную и запасные модели
+ */
+export function updateAiModelSelection(primary: string, fallbacks: string[]): AppSettings {
+  return saveSettings({
+    primaryModel: primary,
+    fallbackModels: fallbacks.slice(0, 2),
+  });
+}
+

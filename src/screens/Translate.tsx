@@ -102,11 +102,6 @@ export const Translate: React.FC = () => {
     }
   };
 
-  const handleAskAi = (question: string) => {
-    // В будущей задаче T7 здесь будет открытие шторки ИИ-помощника
-    alert(`Запрос к ИИ (задача T7):\n${question}`);
-  };
-
   if (!initialized) {
     return (
       <div className="p-4 pt-safe flex items-center justify-center min-h-[50vh]">
@@ -274,7 +269,6 @@ export const Translate: React.FC = () => {
         <ExerciseCard
           exercise={currentExercise}
           onResult={handleResult}
-          onAskAi={handleAskAi}
         />
       )}
     </div>

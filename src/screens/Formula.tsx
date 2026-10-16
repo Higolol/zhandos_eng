@@ -338,20 +338,30 @@ export const Formula: React.FC = () => {
   const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
   const isDemo = searchParams.get('demo') === '1';
+  const paramTopic = searchParams.get('topic') || '';
+  const paramHw = searchParams.get('hw') || '';
 
   // Фильтр или демо
   const exercisesPool = useMemo(() => {
     if (isDemo) {
       return DEMO_EXERCISES;
     }
-    const filtered = (dataset.exercises || []).filter(
+    const base = (dataset.exercises || []).filter(
       (e) => e.formula && e.formula.length > 0 && e.type !== 'translate_en_ru'
     );
-    return filtered.length > 0 ? filtered : DEMO_EXERCISES;
-  }, [isDemo]);
+    const filtered = base.filter((e) => {
+      if (paramHw && e.hw !== paramHw) return false;
+      if (paramTopic && !e.topics.includes(paramTopic as any)) return false;
+      return true;
+    });
+    return filtered.length > 0 ? filtered : base.length > 0 ? base : DEMO_EXERCISES;
+  }, [isDemo, paramTopic, paramHw]);
 
   // Индекс текущего задания
   const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [isDemo, paramTopic, paramHw]);
   const exercise = exercisesPool[currentIndex] || exercisesPool[0];
 
   // Состояние конструктора

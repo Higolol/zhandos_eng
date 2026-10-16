@@ -85,6 +85,24 @@ export default defineConfig(({ mode }) => {
         },
       }),
     ],
+    build: {
+      chunkSizeWarningLimit: 900,
+      rollupOptions: {
+        output: {
+          manualChunks(id: string) {
+            if (id.includes('node_modules')) {
+              return 'vendor';
+            }
+            if (id.includes('dataset.json')) {
+              return 'dataset';
+            }
+            if (id.includes('theory.json') || id.includes('writing.json')) {
+              return 'theory-data';
+            }
+          },
+        },
+      },
+    },
     server: {
       proxy: aiProxy,
     },

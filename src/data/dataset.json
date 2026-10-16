@@ -1,5 +1,5 @@
 {
- "version": "2026-09-28",
+ "version": "2026-10-16",
  "lessons": [
   {
    "hw": "HW1",
@@ -5321,8 +5321,7 @@
    "type": "translate_ru_en",
    "ru": "Почему мы не помнили?",
    "en": [
-    "Why did we not remember?",
-    "Why did not we remember?"
+    "Why did we not remember?"
    ],
    "formula": [
     {
@@ -7196,8 +7195,7 @@
    "type": "translate_ru_en",
    "ru": "Почему я не помнил(а)?",
    "en": [
-    "Why did I not remember?",
-    "Why did not I remember?"
+    "Why did I not remember?"
    ],
    "formula": [
     {
@@ -7551,8 +7549,7 @@
    "type": "translate_ru_en",
    "ru": "Почему она не помнила?",
    "en": [
-    "Why did she not remember?",
-    "Why did not she remember?"
+    "Why did she not remember?"
    ],
    "formula": [
     {
@@ -8496,8 +8493,7 @@
    "type": "translate_ru_en",
    "ru": "Почему её там не помнили?",
    "en": [
-    "Why was she not remembered there?",
-    "Why was not she remembered there?"
+    "Why was she not remembered there?"
    ],
    "formula": [
     {
@@ -9312,6 +9308,7 @@
    "ru": "Моему брату не нравилось, когда меня хвалили?",
    "en": [
     "Did my brother not like when I was praised?",
+    "Didn't my brother like when I was praised?",
     "My brother did not like when I was praised?"
    ],
    "formula": [
@@ -23393,8 +23390,7 @@
    "type": "translate_ru_en",
    "ru": "Почему я не могу платить?",
    "en": [
-    "Why can I not pay?",
-    "Why can't I pay?"
+    "Why can I not pay?"
    ],
    "formula": [
     {
@@ -31669,7 +31665,8 @@
    "type": "translate_ru_en",
    "ru": "Почему мой стол не в квартире?",
    "en": [
-    "Why is my table not in the apartment?"
+    "Why is my table not in the apartment?",
+    "Why isn't my table in the apartment?"
    ],
    "formula": [
     {
@@ -43687,7 +43684,6 @@
    "ru": "Почему он ничего не купил?",
    "en": [
     "Why did he not buy anything?",
-    "Why didn't he buy anything?",
     "Why did he buy nothing?"
    ],
    "formula": [
@@ -51813,8 +51809,7 @@
    "type": "translate_ru_en",
    "ru": "Почему Вы в прошлом году не были в Америке?",
    "en": [
-    "Why were you not in America last year?",
-    "Why weren't you in America last year?"
+    "Why were you not in America last year?"
    ],
    "formula": [
     {
@@ -51870,8 +51865,7 @@
    "type": "translate_ru_en",
    "ru": "Почему ты в прошлом году не был в Америке?",
    "en": [
-    "Why were you not in America last year?",
-    "Why weren't you in America last year?"
+    "Why were you not in America last year?"
    ],
    "formula": [
     {
@@ -51927,8 +51921,7 @@
    "type": "translate_ru_en",
    "ru": "Почему он в прошлом году не был в Америке?",
    "en": [
-    "Why was he not in America last year?",
-    "Why wasn't he in America last year?"
+    "Why was he not in America last year?"
    ],
    "formula": [
     {
@@ -53427,8 +53420,7 @@
    "code": "did",
    "literal": "Почему не делал ты иметь вставать рано?",
    "myPastAnswer": "Why didn’t you have to get up early?",
-   "myPastAnswerOk": false,
-   "myPastAnswerNote": "Стяжённая форма didn't you (при раскрытии did not you) отличается порядком слов от эталона did you not."
+   "myPastAnswerOk": true
   },
   {
    "id": "HW33-s1-01",

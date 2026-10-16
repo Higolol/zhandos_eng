@@ -37,6 +37,14 @@ export const Home: React.FC = () => {
     });
   }, [selectedTopic, selectedLesson]);
 
+  const filterQuery = useMemo(() => {
+    const params = new URLSearchParams();
+    if (selectedTopic !== 'all') params.set('topic', selectedTopic);
+    if (selectedLesson !== 'all') params.set('hw', selectedLesson);
+    const qs = params.toString();
+    return qs ? `?${qs}` : '';
+  }, [selectedTopic, selectedLesson]);
+
   return (
     <div className="p-4 flex flex-col gap-5 pt-safe">
       {/* Header */}
@@ -63,7 +71,7 @@ export const Home: React.FC = () => {
         </h2>
         <div className="grid grid-cols-2 gap-3">
           <Link
-            to="/translate"
+            to={`/translate${filterQuery}`}
             className="flex flex-col justify-between p-3.5 rounded-xl bg-gradient-to-br from-red-50 to-red-100/60 dark:from-red-950/40 dark:to-red-900/20 border border-red-200 dark:border-red-900/50 hover:shadow-md transition-all active:scale-[0.98] min-h-touch"
           >
             <div className="w-8 h-8 rounded-lg bg-red-600 text-white flex items-center justify-center font-bold text-sm mb-2 shadow-sm">
@@ -73,12 +81,14 @@ export const Home: React.FC = () => {
               <span className="font-semibold text-sm text-gray-900 dark:text-gray-100 block">
                 Перевод RU→EN
               </span>
-              <span className="text-xs text-gray-500 dark:text-gray-400">Основной режим</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">
+                Основной режим ({filteredExercises.length})
+              </span>
             </div>
           </Link>
 
           <Link
-            to="/formula"
+            to={`/formula${filterQuery}`}
             className="flex flex-col justify-between p-3.5 rounded-xl bg-gradient-to-br from-blue-50 to-blue-100/60 dark:from-blue-950/40 dark:to-blue-900/20 border border-blue-200 dark:border-blue-900/50 hover:shadow-md transition-all active:scale-[0.98] min-h-touch"
           >
             <div className="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-xs mb-2 shadow-sm">
@@ -179,6 +189,23 @@ export const Home: React.FC = () => {
             ))}
           </select>
         </div>
+
+        {(selectedTopic !== 'all' || selectedLesson !== 'all') && (
+          <div className="flex gap-2 pt-1">
+            <Link
+              to={`/translate${filterQuery}`}
+              className="flex-1 py-2.5 px-3 bg-red-600 hover:bg-red-700 text-white text-xs font-bold rounded-xl text-center min-h-touch flex items-center justify-center shadow-xs transition-all"
+            >
+              Тренировать перевод ({filteredExercises.length}) →
+            </Link>
+            <Link
+              to={`/formula${filterQuery}`}
+              className="py-2.5 px-3 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold rounded-xl text-center min-h-touch flex items-center justify-center shadow-xs transition-all"
+            >
+              Формула →
+            </Link>
+          </div>
+        )}
       </section>
 
       {/* Dataset quick info */}
