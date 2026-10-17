@@ -186,18 +186,18 @@ export const Grid: React.FC = () => {
   return (
     <div className="p-4 flex flex-col gap-4 pt-safe pb-24 max-w-2xl mx-auto w-full">
       {/* Шапка */}
-      <header className="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 pb-3">
-        <div className="flex items-center gap-2">
+      <header className="flex items-center justify-between gap-3 border-b border-gray-200 dark:border-gray-800 pb-3">
+        <div className="flex items-center gap-2 min-w-0 flex-1">
           <button
             onClick={() => navigate('/')}
-            className="p-2 -ml-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 min-h-touch min-w-touch flex items-center justify-center"
+            className="p-2 -ml-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 min-h-touch min-w-touch flex items-center justify-center shrink-0"
             aria-label="Назад к тренировке"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <div>
+          <div className="min-w-0">
             <h1 className="text-lg font-bold text-gray-900 dark:text-white leading-tight">
               Главный × Смысл
             </h1>
@@ -212,7 +212,7 @@ export const Grid: React.FC = () => {
           <button
             type="button"
             onClick={startSprint}
-            className="px-3 py-1.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs shadow-sm transition-all flex items-center gap-1.5 min-h-[38px]"
+            className="px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs shadow-sm transition-all inline-flex items-center justify-center gap-1.5 min-h-[38px] whitespace-nowrap shrink-0"
           >
             <span>⚡ Спринт 60с</span>
           </button>
@@ -220,7 +220,7 @@ export const Grid: React.FC = () => {
           <button
             type="button"
             onClick={stopSprint}
-            className="px-3 py-1.5 rounded-xl bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-xs min-h-[38px]"
+            className="px-3.5 py-2 rounded-xl bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 font-semibold text-xs min-h-[38px] whitespace-nowrap shrink-0"
           >
             Стоп
           </button>
@@ -256,26 +256,26 @@ export const Grid: React.FC = () => {
       {/* Панель настроек генератора */}
       {!sprintRunning && (
         <section className="p-3.5 rounded-2xl bg-gray-50 dark:bg-gray-800/40 border border-gray-200 dark:border-gray-800 space-y-3">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-            {/* Выбор глагола */}
-            <div>
-              <label className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 block mb-1">
-                Глагол (Действие)
-              </label>
-              <select
-                value={selectedVerb}
-                onChange={(e) => setSelectedVerb(e.target.value)}
-                className="w-full px-2.5 py-2 text-xs rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
-              >
-                <option value="random">🎲 Случайный глагол (30)</option>
-                {VERBS.slice(0, 30).map((v) => (
-                  <option key={v.v1} value={v.v1}>
-                    {v.particle ? `${v.v1} ${v.particle}` : v.v1} — {v.ru}
-                  </option>
-                ))}
-              </select>
-            </div>
+          {/* Выбор глагола */}
+          <div>
+            <label className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 block mb-1">
+              Глагол (Действие)
+            </label>
+            <select
+              value={selectedVerb}
+              onChange={(e) => setSelectedVerb(e.target.value)}
+              className="w-full px-3 py-2 text-xs rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+            >
+              <option value="random">🎲 Случайный глагол (30)</option>
+              {VERBS.slice(0, 30).map((v) => (
+                <option key={v.v1} value={v.v1}>
+                  {v.particle ? `${v.v1} ${v.particle}` : v.v1} — {v.ru}
+                </option>
+              ))}
+            </select>
+          </div>
 
+          <div className="grid grid-cols-1 gap-2.5">
             {/* Набор смыслов */}
             <div>
               <label className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 block mb-1">
@@ -296,7 +296,7 @@ export const Grid: React.FC = () => {
                       setMeaningFilter(tab.id);
                       setManualMeaning('random');
                     }}
-                    className={`py-1.5 text-[11px] font-semibold rounded-lg transition-all ${
+                    className={`py-1.5 px-2 text-xs font-semibold rounded-lg transition-all whitespace-nowrap ${
                       meaningFilter === tab.id
                         ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-xs'
                         : 'text-gray-600 dark:text-gray-400'
@@ -328,7 +328,7 @@ export const Grid: React.FC = () => {
                       setVoiceFilter(tab.id);
                       setManualSubj('random');
                     }}
-                    className={`py-1.5 text-[11px] font-semibold rounded-lg transition-all ${
+                    className={`py-1.5 px-2 text-xs font-semibold rounded-lg transition-all whitespace-nowrap ${
                       voiceFilter === tab.id
                         ? 'bg-white dark:bg-gray-800 text-gray-900 dark:text-white shadow-xs'
                         : 'text-gray-600 dark:text-gray-400'
@@ -343,7 +343,7 @@ export const Grid: React.FC = () => {
 
           {/* Точечный выбор Ведущего и Смысла */}
           <div className="grid grid-cols-2 gap-2.5 pt-1 border-t border-gray-200/70 dark:border-gray-800">
-            <div>
+            <div className="min-w-0">
               <label className="text-[10px] font-semibold text-blue-600 dark:text-blue-400 block mb-1">
                 Кто ГЛАВНЫЙ (1 — Ведущий)
               </label>
@@ -363,7 +363,7 @@ export const Grid: React.FC = () => {
               </select>
             </div>
 
-            <div>
+            <div className="min-w-0">
               <label className="text-[10px] font-semibold text-red-600 dark:text-red-400 block mb-1">
                 Смысл / Код (0 — Ключ)
               </label>

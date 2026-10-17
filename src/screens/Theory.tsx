@@ -124,9 +124,9 @@ export const Theory: React.FC = () => {
 
   return (
     <div className="p-4 flex flex-col gap-4 pt-safe pb-24 max-w-3xl mx-auto w-full">
-      <header className="border-b border-gray-200 dark:border-gray-800 pb-3 space-y-2">
-        <div className="flex items-center justify-between">
-          <div>
+      <header className="border-b border-gray-200 dark:border-gray-800 pb-3 space-y-2.5">
+        <div className="flex items-center justify-between gap-2">
+          <div className="min-w-0 flex-1">
             <h1 className="text-lg font-bold text-gray-900 dark:text-white leading-tight">
               Теория и Схемы
             </h1>
@@ -134,24 +134,24 @@ export const Theory: React.FC = () => {
               Справочник методики «English Algorithm» ({theoryCards.length} карточек)
             </p>
           </div>
-          <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-red-50 text-red-700 dark:bg-red-950/60 dark:text-red-300 font-semibold">
+          <span className="text-xs font-mono px-2.5 py-1 rounded-full bg-red-50 text-red-700 dark:bg-red-950/60 dark:text-red-300 font-semibold whitespace-nowrap shrink-0">
             [-1] [0] [1] [2] [3]
           </span>
         </div>
 
         {/* Поиск и фильтр по теме */}
-        <div className="flex flex-col sm:flex-row gap-2 pt-1">
+        <div className="flex flex-col gap-2 pt-1">
           <input
             type="search"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Поиск по правилу, коду или примеру..."
-            className="flex-1 px-3 py-2 text-xs rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-red-500"
+            className="w-full min-w-0 px-3 py-2 text-xs rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-red-500"
           />
           <select
             value={selectedTopic}
             onChange={(e) => setSelectedTopic(e.target.value)}
-            className="px-3 py-2 text-xs rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-red-500"
+            className="w-full min-w-0 max-w-full px-3 py-2 text-xs rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-red-500"
           >
             {availableTopics.map((t) => (
               <option key={t} value={t}>

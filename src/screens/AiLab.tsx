@@ -207,11 +207,11 @@ export const AiLab: React.FC = () => {
     <div className="p-4 flex flex-col gap-4 pb-20 max-w-3xl mx-auto w-full">
       {/* Шапка экрана с текущим статусом ИИ */}
       <header className="flex flex-col gap-2 pb-3 border-b border-gray-200 dark:border-gray-800">
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
+        <div className="flex items-center justify-between gap-2">
+          <div className="min-w-0 flex-1">
+            <h1 className="text-xl font-bold text-gray-900 dark:text-white flex items-center gap-2 flex-wrap">
               <span>ИИ-Лаборатория</span>
-              <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-300">
+              <span className="text-xs px-2 py-0.5 rounded-full font-medium bg-red-100 text-red-700 dark:bg-red-950 dark:text-red-300 whitespace-nowrap">
                 OpenRouter
               </span>
             </h1>
@@ -223,7 +223,7 @@ export const AiLab: React.FC = () => {
           <button
             type="button"
             onClick={() => setShowSettings(!showSettings)}
-            className="px-3 py-1.5 text-xs font-medium rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/60 transition-colors flex items-center gap-1.5 shadow-sm"
+            className="px-3 py-1.5 text-xs font-medium rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/60 transition-colors inline-flex items-center gap-1.5 shadow-sm whitespace-nowrap shrink-0"
           >
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path
@@ -323,11 +323,11 @@ export const AiLab: React.FC = () => {
             <label className="text-xs font-medium text-gray-700 dark:text-gray-300 block">
               Выберите тему для генерации 5 похожих заданий:
             </label>
-            <div className="flex flex-col sm:flex-row gap-2">
+            <div className="flex flex-col gap-2">
               <select
                 value={selectedTopic}
                 onChange={(e) => setSelectedTopic(e.target.value as Topic)}
-                className="flex-1 px-3 py-2 text-xs rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-red-500"
+                className="w-full min-w-0 max-w-full px-3 py-2 text-xs rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-red-500"
               >
                 {TOPICS_LIST.map((topic) => (
                   <option key={topic} value={topic}>
@@ -340,7 +340,7 @@ export const AiLab: React.FC = () => {
                 type="button"
                 onClick={handleGenerate}
                 disabled={isGenerating}
-                className="px-4 py-2 text-xs font-semibold rounded-xl bg-red-600 hover:bg-red-700 text-white transition-all disabled:opacity-50 flex items-center justify-center gap-1.5 shadow-sm min-w-[150px]"
+                className="w-full px-4 py-2.5 text-xs font-semibold rounded-xl bg-red-600 hover:bg-red-700 text-white transition-all disabled:opacity-50 flex items-center justify-center gap-1.5 shadow-sm whitespace-nowrap"
               >
                 {isGenerating ? (
                   <>
