@@ -46,7 +46,7 @@ export const Home: React.FC = () => {
   }, [selectedTopic, selectedLesson]);
 
   return (
-    <div className="p-4 flex flex-col gap-5 pt-safe">
+    <div className="p-4 flex flex-col gap-5 pt-safe max-w-4xl mx-auto w-full">
       {/* Header */}
       <header className="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 pb-3">
         <div className="flex items-center gap-2.5">
@@ -69,7 +69,7 @@ export const Home: React.FC = () => {
         <h2 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2.5">
           Режимы тренировки
         </h2>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="cq-modes-grid gap-3">
           <Link
             to={`/translate${filterQuery}`}
             className="flex flex-col justify-between p-3.5 rounded-xl bg-gradient-to-br from-red-50 to-red-100/60 dark:from-red-950/40 dark:to-red-900/20 border border-red-200 dark:border-red-900/50 hover:shadow-md transition-all active:scale-[0.98] min-h-touch"
@@ -137,7 +137,7 @@ export const Home: React.FC = () => {
       {/* Filter Section */}
       <section
         aria-label="Фильтры"
-        className="p-3.5 rounded-xl bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700/60 flex flex-col gap-3"
+        className="p-4 rounded-2xl bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700/60 flex flex-col gap-3"
       >
         <div className="flex items-center justify-between">
           <h2 className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
@@ -148,46 +148,48 @@ export const Home: React.FC = () => {
           </span>
         </div>
 
-        {/* Topic select */}
-        <div>
-          <label htmlFor="topic-filter" className="block text-xs text-gray-600 dark:text-gray-400 mb-1">
-            Тема
-          </label>
-          <select
-            id="topic-filter"
-            value={selectedTopic}
-            onChange={(e) => setSelectedTopic(e.target.value)}
-            className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-2.5 text-sm min-h-touch text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:outline-none"
-          >
-            <option value="all">Все темы</option>
-            {Object.entries(TOPIC_LABELS)
-              .filter(([k]) => k !== 'all')
-              .map(([key, label]) => (
-                <option key={key} value={key}>
-                  {label}
+        <div className="cq-grid-2 gap-3">
+          {/* Topic select */}
+          <div className="min-w-0">
+            <label htmlFor="topic-filter" className="block text-xs text-gray-600 dark:text-gray-400 mb-1">
+              Тема
+            </label>
+            <select
+              id="topic-filter"
+              value={selectedTopic}
+              onChange={(e) => setSelectedTopic(e.target.value)}
+              className="w-full min-w-0 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl p-2.5 text-xs min-h-touch text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:outline-none"
+            >
+              <option value="all">Все темы</option>
+              {Object.entries(TOPIC_LABELS)
+                .filter(([k]) => k !== 'all')
+                .map(([key, label]) => (
+                  <option key={key} value={key}>
+                    {label}
+                  </option>
+                ))}
+            </select>
+          </div>
+
+          {/* Lesson select */}
+          <div className="min-w-0">
+            <label htmlFor="lesson-filter" className="block text-xs text-gray-600 dark:text-gray-400 mb-1">
+              Урок (HW)
+            </label>
+            <select
+              id="lesson-filter"
+              value={selectedLesson}
+              onChange={(e) => setSelectedLesson(e.target.value)}
+              className="w-full min-w-0 bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl p-2.5 text-xs min-h-touch text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:outline-none"
+            >
+              <option value="all">Все уроки</option>
+              {dataset.lessons.map((lesson) => (
+                <option key={lesson.hw} value={lesson.hw}>
+                  {lesson.hw}: {lesson.title}
                 </option>
               ))}
-          </select>
-        </div>
-
-        {/* Lesson select */}
-        <div>
-          <label htmlFor="lesson-filter" className="block text-xs text-gray-600 dark:text-gray-400 mb-1">
-            Урок (HW)
-          </label>
-          <select
-            id="lesson-filter"
-            value={selectedLesson}
-            onChange={(e) => setSelectedLesson(e.target.value)}
-            className="w-full bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg p-2.5 text-sm min-h-touch text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-red-500 focus:outline-none"
-          >
-            <option value="all">Все уроки</option>
-            {dataset.lessons.map((lesson) => (
-              <option key={lesson.hw} value={lesson.hw}>
-                {lesson.hw}: {lesson.title}
-              </option>
-            ))}
-          </select>
+            </select>
+          </div>
         </div>
 
         {(selectedTopic !== 'all' || selectedLesson !== 'all') && (

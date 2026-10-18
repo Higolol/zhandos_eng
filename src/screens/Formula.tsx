@@ -518,7 +518,7 @@ export const Formula: React.FC = () => {
   const isFilled = placedTiles.length > 0 && placedTiles.every((t) => t !== null);
 
   return (
-    <div className="w-full max-w-[480px] mx-auto min-h-screen flex flex-col p-4 pb-24 pt-safe select-none">
+    <div className="w-full max-w-3xl mx-auto min-h-screen flex flex-col p-4 pb-24 pt-safe select-none">
       {/* Шапка экрана */}
       <header className="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 pb-3 mb-4">
         <div className="flex items-center gap-3">

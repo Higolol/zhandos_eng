@@ -184,7 +184,7 @@ export const Grid: React.FC = () => {
     : currentItem.verbInfo.v1;
 
   return (
-    <div className="p-4 flex flex-col gap-4 pt-safe pb-24 max-w-2xl mx-auto w-full">
+    <div className="p-4 flex flex-col gap-4 pt-safe pb-24 max-w-4xl mx-auto w-full">
       {/* Шапка */}
       <header className="flex items-center justify-between gap-3 border-b border-gray-200 dark:border-gray-800 pb-3">
         <div className="flex items-center gap-2 min-w-0 flex-1">
@@ -256,28 +256,28 @@ export const Grid: React.FC = () => {
       {/* Панель настроек генератора */}
       {!sprintRunning && (
         <section className="p-3.5 rounded-2xl bg-gray-50 dark:bg-gray-800/40 border border-gray-200 dark:border-gray-800 space-y-3">
-          {/* Выбор глагола */}
-          <div>
-            <label className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 block mb-1">
-              Глагол (Действие)
-            </label>
-            <select
-              value={selectedVerb}
-              onChange={(e) => setSelectedVerb(e.target.value)}
-              className="w-full px-3 py-2 text-xs rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
-            >
-              <option value="random">🎲 Случайный глагол (30)</option>
-              {VERBS.slice(0, 30).map((v) => (
-                <option key={v.v1} value={v.v1}>
-                  {v.particle ? `${v.v1} ${v.particle}` : v.v1} — {v.ru}
-                </option>
-              ))}
-            </select>
-          </div>
+          <div className="cq-grid-3 gap-3">
+            {/* Выбор глагола */}
+            <div className="min-w-0">
+              <label className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 block mb-1">
+                Глагол (Действие)
+              </label>
+              <select
+                value={selectedVerb}
+                onChange={(e) => setSelectedVerb(e.target.value)}
+                className="w-full min-w-0 max-w-full px-3 py-2 text-xs rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+              >
+                <option value="random">🎲 Случайный глагол (30)</option>
+                {VERBS.slice(0, 30).map((v) => (
+                  <option key={v.v1} value={v.v1}>
+                    {v.particle ? `${v.v1} ${v.particle}` : v.v1} — {v.ru}
+                  </option>
+                ))}
+              </select>
+            </div>
 
-          <div className="grid grid-cols-1 gap-2.5">
             {/* Набор смыслов */}
-            <div>
+            <div className="min-w-0">
               <label className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 block mb-1">
                 Набор смыслов
               </label>
@@ -309,7 +309,7 @@ export const Grid: React.FC = () => {
             </div>
 
             {/* Залог */}
-            <div>
+            <div className="min-w-0">
               <label className="text-[11px] font-semibold text-gray-500 dark:text-gray-400 block mb-1">
                 Залог
               </label>

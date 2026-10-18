@@ -23,7 +23,15 @@
   input, textarea, select {
     user-select: text;
     -webkit-user-select: text;
-    font-size: 16px !important; /* Prevents auto-zoom on iOS */
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /* Предотвращаем авто-зум Safari только на сенсорных мобильных экранах */
+  @media (max-width: 767px) and (pointer: coarse) {
+    input, textarea, select {
+      font-size: 16px !important;
+    }
   }
 
   /* Tap target minimum 44px for primary interactive elements */
@@ -47,4 +55,66 @@
 
 .min-w-touch {
   min-width: 44px;
+}
+
+/* Контейнерные запросы (Container Queries) для автоматической адаптации ПК vs Смартфон */
+.app-content-container {
+  container-type: inline-size;
+  width: 100%;
+}
+
+.cq-grid-2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.cq-grid-3 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.cq-modes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cq-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.cq-me-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@container (min-width: 600px) {
+  .cq-grid-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cq-row {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@container (min-width: 680px) {
+  .cq-grid-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .cq-modes-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@container (min-width: 760px) {
+  .cq-me-grid {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    align-items: start;
+    gap: 1.5rem;
+  }
 }

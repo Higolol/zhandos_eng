@@ -113,7 +113,7 @@ export const Translate: React.FC = () => {
   // Пустой пул заданий
   if (matchedExercises.length === 0) {
     return (
-      <div className="p-4 flex flex-col gap-4 pt-safe">
+      <div className="p-4 flex flex-col gap-4 pt-safe max-w-3xl mx-auto w-full">
         <header className="flex items-center gap-3 border-b border-gray-200 dark:border-gray-800 pb-3">
           <button
             onClick={() => navigate('/')}
@@ -158,7 +158,7 @@ export const Translate: React.FC = () => {
   if (isFinished) {
     const accuracy = totalInitial > 0 ? Math.round((correctCount / totalInitial) * 100) : 0;
     return (
-      <div className="p-4 flex flex-col gap-5 pt-safe">
+      <div className="p-4 flex flex-col gap-5 pt-safe max-w-3xl mx-auto w-full">
         <header className="flex items-center gap-3 border-b border-gray-200 dark:border-gray-800 pb-3">
           <button
             onClick={() => navigate('/')}
@@ -218,7 +218,7 @@ export const Translate: React.FC = () => {
     totalInitial > 0 ? Math.min(100, Math.round(((currentIndex) / totalInitial) * 100)) : 0;
 
   return (
-    <div className="p-4 flex flex-col gap-4 pt-safe">
+    <div className="p-4 flex flex-col gap-4 pt-safe max-w-3xl mx-auto w-full">
       {/* Шапка тренировки */}
       <header className="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 pb-3">
         <div className="flex items-center gap-2">

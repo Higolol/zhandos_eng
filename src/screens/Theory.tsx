@@ -123,7 +123,7 @@ export const Theory: React.FC = () => {
   }, [selectedTopic, searchQuery]);
 
   return (
-    <div className="p-4 flex flex-col gap-4 pt-safe pb-24 max-w-3xl mx-auto w-full">
+    <div className="p-4 flex flex-col gap-4 pt-safe pb-24 max-w-4xl mx-auto w-full">
       <header className="border-b border-gray-200 dark:border-gray-800 pb-3 space-y-2.5">
         <div className="flex items-center justify-between gap-2">
           <div className="min-w-0 flex-1">
@@ -140,7 +140,7 @@ export const Theory: React.FC = () => {
         </div>
 
         {/* Поиск и фильтр по теме */}
-        <div className="flex flex-col gap-2 pt-1">
+        <div className="cq-grid-2 gap-2.5 pt-1">
           <input
             type="search"
             value={searchQuery}
