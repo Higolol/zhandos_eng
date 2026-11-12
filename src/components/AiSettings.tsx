@@ -177,41 +177,73 @@ export const AiSettings: React.FC<AiSettingsProps> = ({
         </div>
       </div>
 
-      {/* Поля ключа/доступа */}
+      {/* Поля ключа/доступа и подсказки */}
       {settings.aiMode === 'dev' && (
-        <div className="p-2.5 rounded-xl bg-gray-50 dark:bg-gray-900/50 border border-gray-100 dark:border-gray-800 text-xs text-gray-600 dark:text-gray-400">
-          В dev-режиме ключ подставляет Vite-прокси автоматически. Запросы идут на{' '}
-          <code className="text-gray-800 dark:text-gray-200">/api/ai/...</code>
+        <div className="p-2.5 rounded-xl bg-gray-50 dark:bg-gray-900/50 border border-gray-100 dark:border-gray-800 text-xs text-gray-600 dark:text-gray-400 space-y-1">
+          <p className="font-medium text-gray-800 dark:text-gray-200">
+            Только для локальной разработки (localhost)
+          </p>
+          <p>
+            При запуске через <code className="text-gray-800 dark:text-gray-200">npm run dev</code> ключ
+            автоматически подставляет Vite-прокси (<code className="text-gray-800 dark:text-gray-200">/api/ai</code>).
+            На опубликованном сайте выберите <strong>Прокси T9</strong> или <strong>Свой ключ</strong>.
+          </p>
         </div>
       )}
 
       {settings.aiMode === 'proxy' && (
-        <div className="space-y-1">
-          <label className="text-xs font-medium text-gray-700 dark:text-gray-300">
-            Код доступа ученика
-          </label>
-          <input
-            type="password"
-            value={settings.accessCode}
-            onChange={handleAccessCodeChange}
-            placeholder="Введите код доступа..."
-            className="w-full px-3 py-1.5 text-xs rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-red-500"
-          />
+        <div className="space-y-2">
+          <div className="space-y-1">
+            <label className="text-xs font-medium text-gray-700 dark:text-gray-300">
+              Код доступа ученика
+            </label>
+            <input
+              type="password"
+              value={settings.accessCode}
+              onChange={handleAccessCodeChange}
+              placeholder="Введите код доступа от преподавателя..."
+              className="w-full px-3 py-1.5 text-xs rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-red-500"
+            />
+          </div>
+          <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed">
+            Запросы идут через защищённый прокси-сервер преподавателя — свой API-ключ не нужен.
+            Доступно только бесплатным моделям по выданному коду.
+          </p>
+          {!import.meta.env.VITE_PROXY_URL && (
+            <p className="text-[11px] px-2.5 py-1.5 rounded-lg bg-amber-50 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 text-amber-800 dark:text-amber-300">
+              Прокси-сервер (VITE_PROXY_URL) для этой сборки не настроен. Воспользуйтесь режимом{' '}
+              <strong>«Свой ключ»</strong>.
+            </p>
+          )}
         </div>
       )}
 
       {settings.aiMode === 'byok' && (
-        <div className="space-y-1">
-          <label className="text-xs font-medium text-gray-700 dark:text-gray-300">
-            Ключ OpenRouter API
-          </label>
-          <input
-            type="password"
-            value={settings.openrouterKey}
-            onChange={handleOpenrouterKeyChange}
-            placeholder="sk-or-v1-..."
-            className="w-full px-3 py-1.5 text-xs rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-red-500"
-          />
+        <div className="space-y-2">
+          <div className="space-y-1">
+            <label className="text-xs font-medium text-gray-700 dark:text-gray-300">
+              Ключ OpenRouter API
+            </label>
+            <input
+              type="password"
+              value={settings.openrouterKey}
+              onChange={handleOpenrouterKeyChange}
+              placeholder="sk-or-v1-..."
+              className="w-full px-3 py-1.5 text-xs rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-red-500"
+            />
+          </div>
+          <p className="text-[11px] text-gray-500 dark:text-gray-400 leading-relaxed">
+            Создайте бесплатный ключ на{' '}
+            <a
+              href="https://openrouter.ai/keys"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-red-600 dark:text-red-400 underline hover:no-underline"
+            >
+              openrouter.ai/keys
+            </a>{' '}
+            и вставьте сюда. Ключ сохраняется только локально в вашем браузере и не передаётся третьим лицам.
+          </p>
         </div>
       )}
 

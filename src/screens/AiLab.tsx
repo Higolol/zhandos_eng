@@ -288,6 +288,65 @@ export const AiLab: React.FC = () => {
             />
           </div>
         )}
+
+        {/* Инструкция по подключению ИИ (Dev / Прокси T9 / Свой ключ) */}
+        <details className="mt-1 rounded-xl bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 text-xs">
+          <summary className="px-3 py-2 cursor-pointer font-medium text-gray-700 dark:text-gray-200 flex items-center justify-between select-none hover:text-gray-900 dark:hover:text-white">
+            <span>Как подключить ИИ? (Прокси T9 / Свой ключ / Dev)</span>
+            <span className="text-[11px] text-gray-400">инструкция</span>
+          </summary>
+          <div className="px-3 pb-3 pt-1.5 space-y-2.5 text-gray-600 dark:text-gray-300 border-t border-gray-200/70 dark:border-gray-700/70">
+            <div>
+              <p className="font-semibold text-gray-900 dark:text-white">
+                1. Прокси T9 <span className="font-normal text-gray-500">(для учеников курса)</span>
+              </p>
+              <p className="mt-0.5 leading-relaxed">
+                Самый простой вариант, если преподаватель выдал вам код. Откройте «Настройки модели» → выберите{' '}
+                <strong>Прокси T9</strong> → введите свой <strong>код доступа</strong>. Личный API-ключ не нужен,
+                запросы идут через защищённый сервер.
+              </p>
+            </div>
+
+            <div>
+              <p className="font-semibold text-gray-900 dark:text-white">
+                2. Свой ключ <span className="font-normal text-gray-500">(для самостоятельной работы)</span>
+              </p>
+              <p className="mt-0.5 leading-relaxed">
+                Создайте бесплатный ключ на{' '}
+                <a
+                  href="https://openrouter.ai/keys"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-red-600 dark:text-red-400 underline hover:no-underline"
+                >
+                  openrouter.ai/keys
+                </a>{' '}
+                (начинается с <code className="text-[11px]">sk-or-v1-...</code>). Откройте «Настройки модели» → выберите{' '}
+                <strong>Свой ключ</strong> → вставьте его. Ключ хранится только локально в вашем браузере.
+              </p>
+            </div>
+
+            <div>
+              <p className="font-semibold text-gray-900 dark:text-white">
+                3. Dev (Vite) <span className="font-normal text-gray-500">(только для разработки)</span>
+              </p>
+              <p className="mt-0.5 leading-relaxed">
+                Используется программистом при локальном запуске проекта на компьютере (
+                <code className="text-[11px]">npm run dev</code>). На опубликованном сайте этот режим не работает.
+              </p>
+            </div>
+
+            {!showSettings && (
+              <button
+                type="button"
+                onClick={() => setShowSettings(true)}
+                className="mt-1 px-3 py-1.5 text-xs font-semibold rounded-lg bg-red-600 hover:bg-red-700 text-white transition-colors"
+              >
+                Открыть настройки модели
+              </button>
+            )}
+          </div>
+        </details>
       </header>
 
       {/* Переключатель вкладок */}
